@@ -3,8 +3,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:kidoresources/constants.dart';
 import 'package:kidoresources/screens/widgets/search_bar.dart';
 
-
-
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -26,8 +24,7 @@ class MyApp extends StatelessWidget {
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context)
-        .size;
+    var size = MediaQuery.of(context).size;
     return Scaffold(
       body: Stack(
         children: <Widget>[
@@ -36,9 +33,8 @@ class HomeScreen extends StatelessWidget {
             decoration: BoxDecoration(
               color: Color(0xFFF5CEB8),
               image: DecorationImage(
-                alignment: Alignment.centerLeft,
-                image: AssetImage("assets/images/undraw_pilates_gpdb.png")
-              ),
+                  alignment: Alignment.centerLeft,
+                  image: AssetImage("assets/images/undraw_pilates_gpdb.png")),
             ),
           ),
           SafeArea(
@@ -58,41 +54,83 @@ class HomeScreen extends StatelessWidget {
                   Expanded(
                     child: GridView.count(
                       crossAxisCount: 2,
+                      childAspectRatio: .85,
+                      crossAxisSpacing: 10,
+                      mainAxisSpacing: 10,
                       children: <Widget>[
-                        Container(
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(13),
-                          ),
-                          child: Column(
-                            children: <Widget>[
-                              Spacer(),
-                              SvgPicture.asset("assets/icons/Hamburger.svg"),
-                              Spacer(),
-                              Text(
-                                "Food Resource",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(fontSize: 16),
-                              ),
-                              Spacer(),
-                              SvgPicture.asset("assets/icons/yoga.svg"),
-                              Spacer(),
-                              Text(
-                                "Activities",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(fontSize: 16),
-                              ),
-                            ],
-                          ),
+                        CatagoryCard(
+                          title: "Food Resources",
+                          svgSrc: "assets/icons/Hamburger.svg",
+                          press: () {},
+                        ),
+                        CatagoryCard(
+                          title: "Actvities",
+                          svgSrc: "assets/icons/yoga.svg",
                         ),
                       ],
-                      ),
                     ),
+                  ),
                 ],
               ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class CatagoryCard extends StatelessWidget {
+  final String svgSrc;
+  final String title;
+  final Function press;
+
+  const CatagoryCard({
+    Key key,
+    this.svgSrc,
+    this.title,
+    this.press,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(13),
+      child: Container(
+        //padding: EdgeInsets.all(20),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(13),
+          boxShadow: [
+            BoxShadow(
+              offset: Offset(0, 17),
+              blurRadius: 17,
+              spreadRadius: -23,
+              color: kShadowColor,
+            ),
+          ],
+        ),
+        child: Material(
+          color: Colors.transparent,
+          child: InkWell(
+            onTap: press,
+            child: Padding(
+              padding: const EdgeInsets.all(20),
+              child: Column(
+                children: <Widget>[
+                  Spacer(),
+                  SvgPicture.asset(svgSrc),
+                  Spacer(),
+                  Text(
+                    title,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 15),
+                  ),
+                ],
               ),
             ),
-        ],
+          ),
+        ),
       ),
     );
   }
