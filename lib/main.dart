@@ -72,7 +72,7 @@ class HomeScreen extends StatelessWidget {
                               Text(
                                 "Food Resource",
                                 textAlign: TextAlign.center,
-                                style: TextStyle(fontSize: 15),
+                                style: TextStyle(fontSize: 16),
                               ),
                             ],
                           ),
