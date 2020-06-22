@@ -66,6 +66,7 @@ class HomeScreen extends StatelessWidget {
                         CatagoryCard(
                           title: "Actvities",
                           svgSrc: "assets/icons/yoga.svg",
+                          press: () {},
                         ),
                       ],
                     ),
