@@ -30,7 +30,7 @@ class HomeScreen extends StatelessWidget {
     var size = MediaQuery.of(context).size;
     return Scaffold(
       bottomNavigationBar: Container(
-        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        padding: EdgeInsets.symmetric(horizontal: 50, vertical: 10),
         height: 70,
         color: Colors.grey[200],
         child: Row(
@@ -40,11 +40,13 @@ class HomeScreen extends StatelessWidget {
               title: "Today",
               svgSrc: "assets/icons/Icon_calendar.svg",
               press: () {},
+              isActive: true,
             ),
             BottomNavigation(
               title: "Home",
               svgSrc: "assets/icons/Icon_home.svg",
               press: () {},
+              isActive: false,
             ),
           ],
         ),
