@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kidoresources/constants.dart';
+import 'package:kidoresources/screens/CalenderScreen.dart';
 import 'package:kidoresources/screens/widgets/Category_Card.dart';
 import 'package:kidoresources/screens/widgets/Navigation_bar.dart';
 import 'package:kidoresources/screens/widgets/search_bar.dart';
@@ -30,7 +31,7 @@ class HomeScreen extends StatelessWidget {
     var size = MediaQuery.of(context).size;
     return Scaffold(
       bottomNavigationBar: Container(
-        padding: EdgeInsets.symmetric(horizontal: 50, vertical: 10),
+        padding: EdgeInsets.symmetric(horizontal: 70, vertical: 10),
         height: 70,
         color: Colors.grey[200],
         child: Row(
@@ -39,14 +40,28 @@ class HomeScreen extends StatelessWidget {
             BottomNavigation(
               title: "Today",
               svgSrc: "assets/icons/Icon_calendar.svg",
-              press: () {},
-              isActive: true,
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return CalenderScreen();
+                  }),
+                );
+              },
+              isActive: false,
             ),
             BottomNavigation(
               title: "Home",
               svgSrc: "assets/icons/Icon_home.svg",
-              press: () {},
-              isActive: false,
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return HomeScreen();
+                  }),
+                );
+              },
+              isActive: true,
             ),
           ],
         ),
@@ -105,5 +120,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
-
