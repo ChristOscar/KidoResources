@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:kidoresources/constants.dart';
 import 'package:kidoresources/widgets/Category_Card.dart';
 import 'package:kidoresources/widgets/Navigation_bar.dart';
 import 'package:kidoresources/widgets/search_bar.dart';
-import 'package:kidoresources/constants.dart';
 
+import 'CalenderScreen.dart';
 
-class CalenderScreen extends StatelessWidget {
+class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return Scaffold(
       bottomNavigationBar: Container(
         padding: EdgeInsets.symmetric(horizontal: 70, vertical: 10),
@@ -19,13 +23,27 @@ class CalenderScreen extends StatelessWidget {
             BottomNavigation(
               title: "Today",
               svgSrc: "assets/icons/Icon_calendar.svg",
-              press: () {},
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return CalenderScreen();
+                  }),
+                );
+              },
               isActive: false,
             ),
             BottomNavigation(
               title: "Home",
               svgSrc: "assets/icons/Icon_home.svg",
-              press: () {},
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return HomeScreen();
+                  }),
+                );
+              },
               isActive: true,
             ),
           ],
@@ -34,6 +52,7 @@ class CalenderScreen extends StatelessWidget {
       body: Stack(
         children: <Widget>[
           Container(
+            height: size.height * .45,
             decoration: BoxDecoration(
               color: Color(0xFFF5CEB8),
               image: DecorationImage(
@@ -55,6 +74,26 @@ class CalenderScreen extends StatelessWidget {
                     ),
                   ),
                   SearchBar(),
+                  Expanded(
+                    child: GridView.count(
+                      crossAxisCount: 2,
+                      childAspectRatio: .85,
+                      crossAxisSpacing: 10,
+                      mainAxisSpacing: 10,
+                      children: <Widget>[
+                        CatagoryCard(
+                          title: "Food Resources",
+                          svgSrc: "assets/icons/Hamburger.svg",
+                          press: () {},
+                        ),
+                        CatagoryCard(
+                          title: "Actvities",
+                          svgSrc: "assets/icons/yoga.svg",
+                          press: () {},
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
