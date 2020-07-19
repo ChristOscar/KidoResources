@@ -6,12 +6,14 @@ class CatagoryCard extends StatelessWidget {
   final String svgSrc;
   final String title;
   final Function press;
+  final String text;
 
   const CatagoryCard({
     Key key,
     this.svgSrc,
     this.title,
     this.press,
+    this.text,
   }) : super(key: key);
 
   @override
@@ -47,6 +49,10 @@ class CatagoryCard extends StatelessWidget {
                     title,
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 15),
+                  ),
+                  Text(
+                    text,
+                    style: TextStyle(fontSize: 12),
                   ),
                 ],
               ),

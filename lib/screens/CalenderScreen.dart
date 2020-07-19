@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:kidoresources/widgets/Calender_widget.dart';
 import 'package:kidoresources/widgets/Category_Card.dart';
 import 'package:kidoresources/widgets/Navigation_bar.dart';
 import 'package:kidoresources/widgets/search_bar.dart';
-import 'package:kidoresources/constants.dart';
-
 
 class CalenderScreen extends StatelessWidget {
   @override
@@ -47,14 +46,55 @@ class CalenderScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text(
-                    "Good Morning \nPhantayisa",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w900,
-                      fontSize: 35,
+                  //Title
+                  //Soon to be changed to be dynamic with the days
+                  Center(
+                    child: Text(
+                      "New This Week",
+                      style: TextStyle(
+                        fontWeight: FontWeight.w900,
+                        fontSize: 20,
+                      ),
                     ),
                   ),
-                  SearchBar(),
+                  //Search Bar resizing and placement
+                  Center(
+                    child: SizedBox(
+                      height: 110,
+                      width: 230,
+                      child: SearchBar(),
+                    ),
+                  ),
+                  //Calender Settings
+                  Expanded(
+                    child: GridView.count(
+                      crossAxisCount: 1,
+                      childAspectRatio: .5,
+                      crossAxisSpacing: 50,
+                      mainAxisSpacing: 30,
+                      children: <Widget>[
+                        CalenderWidget(),
+                      ],
+                    ),
+                  ),
+                
+                  //Info Card to be placed here with new additions and update
+                  Expanded(
+                    child: GridView.count(
+                      crossAxisCount: 1,
+                      childAspectRatio: 2.3,
+                      crossAxisSpacing: 50,
+                      mainAxisSpacing: 10,
+                      children: <Widget>[
+                        CatagoryCard(
+                          title: "New Additions",
+                          text: "Welcome DCCDS to Kido Resources",
+                          svgSrc: "assets/icons/Hamburger.svg",
+                          press: () {},
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),

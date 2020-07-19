@@ -83,11 +83,13 @@ class HomeScreen extends StatelessWidget {
                       children: <Widget>[
                         CatagoryCard(
                           title: "Food Resources",
+                          text: '',
                           svgSrc: "assets/icons/Hamburger.svg",
                           press: () {},
                         ),
                         CatagoryCard(
                           title: "Actvities",
+                          text: '',
                           svgSrc: "assets/icons/yoga.svg",
                           press: () {},
                         ),
