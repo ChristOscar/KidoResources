@@ -16,16 +16,16 @@ class CalenderScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             BottomNavigation(
-              title: "Today",
-              svgSrc: "assets/icons/Icon_calendar.svg",
-              press: () {},
-              isActive: true,
-            ),
-            BottomNavigation(
               title: "Home",
               svgSrc: "assets/icons/Icon_home.svg",
               press: () {},
               isActive: false,
+            ),
+            BottomNavigation(
+              title: "Today",
+              svgSrc: "assets/icons/Icon_calendar.svg",
+              press: () {},
+              isActive: true,
             ),
           ],
         ),

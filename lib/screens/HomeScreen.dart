@@ -21,19 +21,6 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             BottomNavigation(
-              title: "Today",
-              svgSrc: "assets/icons/Icon_calendar.svg",
-              press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) {
-                    return CalenderScreen();
-                  }),
-                );
-              },
-              isActive: false,
-            ),
-            BottomNavigation(
               title: "Home",
               svgSrc: "assets/icons/Icon_home.svg",
               press: () {
@@ -45,6 +32,19 @@ class HomeScreen extends StatelessWidget {
                 );
               },
               isActive: true,
+            ),
+            BottomNavigation(
+              title: "Today",
+              svgSrc: "assets/icons/Icon_calendar.svg",
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return CalenderScreen();
+                  }),
+                );
+              },
+              isActive: false,
             ),
           ],
         ),
