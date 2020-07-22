@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kidoresources/constants.dart';
+import 'package:kidoresources/screens/ActiviesDetail.dart';
+import 'package:kidoresources/screens/CalenderScreen.dart';
 import 'package:kidoresources/widgets/Category_Card.dart';
 import 'package:kidoresources/widgets/Navigation_bar.dart';
 import 'package:kidoresources/widgets/search_bar.dart';
 
-import 'CalenderScreen.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -91,7 +92,14 @@ class HomeScreen extends StatelessWidget {
                           title: "Actvities",
                           text: '',
                           svgSrc: "assets/icons/yoga.svg",
-                          press: () {},
+                          press: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) {
+                                return ActiviesDetail();
+                              }),
+                            );
+                          },
                         ),
                       ],
                     ),
