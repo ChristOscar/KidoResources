@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kidoresources/screens/ActiviesDetail.dart';
 import 'package:kidoresources/screens/CalenderScreen.dart';
+import 'package:kidoresources/screens/FoodDetail.dart';
 import 'package:kidoresources/widgets/Category_Card.dart';
 import 'package:kidoresources/widgets/Navigation_bar.dart';
 import 'package:kidoresources/widgets/search_bar.dart';
@@ -85,7 +86,14 @@ class HomeScreen extends StatelessWidget {
                           title: "Food Resources",
                           text: '',
                           svgSrc: "assets/icons/Hamburger.svg",
-                          press: () {},
+                          press: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) {
+                                return FoodDetail();
+                              }),
+                            );
+                          },
                         ),
                         CatagoryCard(
                           title: "Actvities",

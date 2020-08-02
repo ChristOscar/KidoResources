@@ -6,7 +6,7 @@ import 'package:kidoresources/screens/HomeScreen.dart';
 import 'package:kidoresources/widgets/Navigation_bar.dart';
 import 'package:kidoresources/widgets/search_bar.dart';
 
-class ActiviesDetail extends StatelessWidget {
+class FoodDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -52,9 +52,9 @@ class ActiviesDetail extends StatelessWidget {
           Container(
             height: size.height * .65,
             decoration: BoxDecoration(
-              color: Colors.lightBlue[200],
+              color: Colors.red[500],
               image: DecorationImage(
-                image: AssetImage("assets/images/meditation_bg.png"),
+                image: AssetImage("assets/images/undraw_pilates_gpdb.png"),
                 fit: BoxFit.fitWidth,
               ),
             ),
@@ -89,7 +89,7 @@ class ActiviesDetail extends StatelessWidget {
                     //Soon to be changed to be dynamic with the days
                     Center(
                       child: Text(
-                        "Activities",
+                        "Food Resources",
                         style: TextStyle(
                           fontWeight: FontWeight.w900,
                           fontSize: 20,
@@ -112,7 +112,7 @@ class ActiviesDetail extends StatelessWidget {
                       height: size.height * 0.05,
                     ),
                     Text(
-                      "Activities",
+                      "Food",
                       style: TextStyle(fontWeight: FontWeight.w900),
                     ),
                     SizedBox(height: 10),
@@ -121,8 +121,9 @@ class ActiviesDetail extends StatelessWidget {
                       width:
                           size.width * .62, // it just take 60% of total width
                       child: Text(
-                        "Live happoer and healthier by having fun and keeping active.\n"
-                        "Fun Fact: Working out and having fun sharpens memory and brain activity!",
+                        "Everyone no matter you postion or soical class should be entilited to "
+                        "Having food in their bellies and love all around."
+                        ,
                       ),
                     ),
                     SizedBox(
@@ -130,7 +131,7 @@ class ActiviesDetail extends StatelessWidget {
                       child: SearchBar(),
                     ),
                     SizedBox(height: 10),
-                    // DCCDS
+                    // Denton Community Food Center
                     Container(
                       margin: EdgeInsets.symmetric(vertical: 5),
                       padding: EdgeInsets.all(10),
@@ -149,9 +150,9 @@ class ActiviesDetail extends StatelessWidget {
                       ),
                       child: Row(
                         children: <Widget>[
-                          SvgPicture.asset(
-                            "assets/icons/Meditation_women_small.svg",
-                          ),
+                          // SvgPicture.asset(
+                          //   "assets/icons/Hamburger.svg",
+                          // ),
                           SizedBox(width: 20),
                           Expanded(
                             child: Column(
@@ -159,12 +160,13 @@ class ActiviesDetail extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
                                 Text(
-                                  "DCCDS",
+                                  "Denton Community Food Center",
                                   style: Theme.of(context).textTheme.subtitle,
                                 ),
                                 Text(
-                                    "Everyday a child walks thorugh the door and experiances change."
-                                    " Let us be the first thing they see. Growing together to make amaerica great again.")
+                                    "Founded in 1974, the Food Center has had as its mission to provide food"
+                                    "from a central community storehouse to needy families and individuals "
+                                    "stuggling with hunger insecurity")
                               ],
                             ),
                           ),
