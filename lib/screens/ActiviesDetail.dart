@@ -159,12 +159,12 @@ class ActiviesDetail extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
                                 Text(
-                                  "DCCDS",
+                                  "School of Choice",
                                   style: Theme.of(context).textTheme.subtitle,
                                 ),
                                 Text(
-                                    "Everyday a child walks thorugh the door and experiances change."
-                                    " Let us be the first thing they see. Growing together to make amaerica great again.")
+                                    "Everyday change is something"
+                                    " you can witness but cant change")
                               ],
                             ),
                           ),
