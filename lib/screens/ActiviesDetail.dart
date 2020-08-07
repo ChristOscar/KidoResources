@@ -130,7 +130,7 @@ class ActiviesDetail extends StatelessWidget {
                       child: SearchBar(),
                     ),
                     SizedBox(height: 10),
-                    // DCCDS
+                    // DCCDS1
                     Container(
                       margin: EdgeInsets.symmetric(vertical: 5),
                       padding: EdgeInsets.all(10),
