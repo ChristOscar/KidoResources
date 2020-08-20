@@ -160,6 +160,7 @@ class ActiviesDetail extends StatelessWidget {
                               children: <Widget>[
                                 Text(
                                   "DCCDS",
+                                  // ignore: deprecated_member_use
                                   style: Theme.of(context).textTheme.subtitle,
                                 ),
                                 Text(
@@ -208,6 +209,7 @@ class ActiviesDetail extends StatelessWidget {
                               children: <Widget>[
                                 Text(
                                   "DCCDS",
+                                  // ignore: deprecated_member_use
                                   style: Theme.of(context).textTheme.subtitle,
                                 ),
                                 Text(
