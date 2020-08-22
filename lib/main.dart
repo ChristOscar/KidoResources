@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kidoresources/constants.dart';
 import 'package:kidoresources/screens/HomeScreen.dart';
-
+import 'package:kidoresources/screens/IntroScreen.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,10 +17,9 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: kBackgroundColor,
         textTheme: Theme.of(context).textTheme.apply(displayColor: kTextColor),
       ),
-      home: HomeScreen(),
+      home: IntroScreen(),
     );
   }
 }
 
-
-
+//home: HomeScreen(),

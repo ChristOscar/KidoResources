@@ -8,7 +8,6 @@ import 'package:kidoresources/widgets/Category_Card.dart';
 import 'package:kidoresources/widgets/Navigation_bar.dart';
 import 'package:kidoresources/widgets/search_bar.dart';
 
-
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -68,7 +67,7 @@ class HomeScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    "Good Morning \nPhantayisa",
+                    "\nWelcome to \nKido Resources",
                     style: TextStyle(
                       fontWeight: FontWeight.w900,
                       fontSize: 35,
