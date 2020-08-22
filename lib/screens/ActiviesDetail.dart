@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kidoresources/constants.dart';
+import 'package:kidoresources/details/Big_brothers_big_sisters.dart';
 import 'package:kidoresources/screens/CalenderScreen.dart';
 import 'package:kidoresources/screens/HomeScreen.dart';
+import 'package:kidoresources/widgets/Category_Card.dart';
 import 'package:kidoresources/widgets/Navigation_bar.dart';
 import 'package:kidoresources/widgets/search_bar.dart';
 
@@ -80,7 +82,7 @@ class ActiviesDetail extends StatelessWidget {
           ),
           SafeArea(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
               child: SingleChildScrollView(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -159,13 +161,13 @@ class ActiviesDetail extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
                                 Text(
-                                  "DCCDS",
+                                  "Big Brothers Big Sisters",
                                   // ignore: deprecated_member_use
                                   style: Theme.of(context).textTheme.subtitle,
                                 ),
                                 Text(
-                                    "Everyday a child walks thorugh the door and experiances change."
-                                    " Let us be the first thing they see. Growing together to make amaerica great again.")
+                                    "We partner with parents/guardians, volunteers, and donors"
+                                    " to provide children with strong  enduring, professionally supported one-to-one relationships.")
                               ],
                             ),
                           ),
@@ -173,7 +175,11 @@ class ActiviesDetail extends StatelessWidget {
                             padding: EdgeInsets.all(5),
                             child: IconButton(
                               icon: Icon(Icons.chevron_right),
-                              onPressed: () {},
+                              onPressed: () {
+                                MaterialPageRoute(builder: (context) {
+                                  return BigBroBigSis();
+                                });
+                              },
                             ),
                           ),
                         ],
@@ -226,6 +232,39 @@ class ActiviesDetail extends StatelessWidget {
                             ),
                           ),
                         ],
+                      ),
+                    ),
+                    // Another type of widget
+                    Container(
+                      margin: EdgeInsets.symmetric(vertical: 10),
+                      padding: EdgeInsets.all(10),
+                      height: 165,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(13),
+                        boxShadow: [
+                          BoxShadow(
+                            offset: Offset(0, 17),
+                            blurRadius: 17,
+                            spreadRadius: -23,
+                            color: kShadowColor,
+                          ),
+                        ],
+                      ),
+                      child: Material(
+                        color: Colors.transparent,
+                        child: InkWell(
+                          onTap: () {
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return BigBroBigSis();
+                              },
+                            );
+                            //Ended here following Category_card.dart when setting it up.
+                            //Not finished
+                            //Page route not working
+                          },
+                        ),
                       ),
                     ),
                   ],
