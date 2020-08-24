@@ -3,7 +3,7 @@ import 'package:kidoresources/screens/CalenderScreen.dart';
 import 'package:kidoresources/screens/HomeScreen.dart';
 import 'package:kidoresources/widgets/Navigation_bar.dart';
 
-class BigBroBigSis extends StatelessWidget {
+class ExploriumMuseum extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
