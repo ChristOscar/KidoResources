@@ -53,7 +53,7 @@ class ExploriumMuseum extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.lightBlue[200],
               image: DecorationImage(
-                image: AssetImage("assets/images/meditation_bg.png"),
+                image: AssetImage("assets/images/undraw_pilates_gpdb.png"),
                 fit: BoxFit.fitWidth,
               ),
             ),

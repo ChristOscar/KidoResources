@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kidoresources/constants.dart';
-import 'package:kidoresources/details/Big_brothers_big_sisters.dart';
-import 'package:kidoresources/details/Explorium_Museum.dart';
+import 'package:kidoresources/details_activies/Big_brothers_big_sisters.dart';
+import 'package:kidoresources/details_activies/Explorium_Museum.dart';
 import 'package:kidoresources/screens/CalenderScreen.dart';
 import 'package:kidoresources/screens/HomeScreen.dart';
 import 'package:kidoresources/widgets/Navigation_bar.dart';
