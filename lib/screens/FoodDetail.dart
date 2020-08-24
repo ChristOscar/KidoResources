@@ -122,8 +122,7 @@ class FoodDetail extends StatelessWidget {
                           size.width * .62, // it just take 60% of total width
                       child: Text(
                         "Everyone no matter you postion or soical class should be entilited to "
-                        "Having food in their bellies and love all around."
-                        ,
+                        "Having food in their bellies and love all around.",
                       ),
                     ),
                     SizedBox(
@@ -161,6 +160,7 @@ class FoodDetail extends StatelessWidget {
                               children: <Widget>[
                                 Text(
                                   "Denton Community Food Center",
+                                  // ignore: deprecated_member_use
                                   style: Theme.of(context).textTheme.subtitle,
                                 ),
                                 Text(
@@ -210,6 +210,7 @@ class FoodDetail extends StatelessWidget {
                               children: <Widget>[
                                 Text(
                                   "DCCDS",
+                                  // ignore: deprecated_member_use
                                   style: Theme.of(context).textTheme.subtitle,
                                 ),
                                 Text(

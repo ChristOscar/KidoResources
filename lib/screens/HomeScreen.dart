@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kidoresources/screens/ActiviesDetail.dart';
 import 'package:kidoresources/screens/CalenderScreen.dart';
 import 'package:kidoresources/screens/FoodDetail.dart';

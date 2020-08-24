@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kidoresources/constants.dart';
 import 'package:kidoresources/details/Big_brothers_big_sisters.dart';
+import 'package:kidoresources/details/Explorium_Museum.dart';
 import 'package:kidoresources/screens/CalenderScreen.dart';
 import 'package:kidoresources/screens/HomeScreen.dart';
-import 'package:kidoresources/widgets/Category_Card.dart';
 import 'package:kidoresources/widgets/Navigation_bar.dart';
 import 'package:kidoresources/widgets/search_bar.dart';
 
@@ -132,109 +132,8 @@ class ActiviesDetail extends StatelessWidget {
                       child: SearchBar(),
                     ),
                     SizedBox(height: 10),
-                    // DCCDS1
-                    Container(
-                      margin: EdgeInsets.symmetric(vertical: 5),
-                      padding: EdgeInsets.all(10),
-                      height: 165,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(13),
-                        boxShadow: [
-                          BoxShadow(
-                            offset: Offset(0, 17),
-                            blurRadius: 23,
-                            spreadRadius: -13,
-                            color: kShadowColor,
-                          ),
-                        ],
-                      ),
-                      child: Row(
-                        children: <Widget>[
-                          SvgPicture.asset(
-                            "assets/icons/Meditation_women_small.svg",
-                          ),
-                          SizedBox(width: 20),
-                          Expanded(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Text(
-                                  "Big Brothers Big Sisters",
-                                  // ignore: deprecated_member_use
-                                  style: Theme.of(context).textTheme.subtitle,
-                                ),
-                                Text(
-                                    "We partner with parents/guardians, volunteers, and donors"
-                                    " to provide children with strong  enduring, professionally supported one-to-one relationships.")
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.all(5),
-                            child: IconButton(
-                              icon: Icon(Icons.chevron_right),
-                              onPressed: () {
-                                MaterialPageRoute(builder: (context) {
-                                  return BigBroBigSis();
-                                });
-                              },
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    // Another Container
-                    Container(
-                      margin: EdgeInsets.symmetric(vertical: 10),
-                      padding: EdgeInsets.all(10),
-                      height: 165,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(13),
-                        boxShadow: [
-                          BoxShadow(
-                            offset: Offset(0, 17),
-                            blurRadius: 23,
-                            spreadRadius: -13,
-                            color: kShadowColor,
-                          ),
-                        ],
-                      ),
-                      child: Row(
-                        children: <Widget>[
-                          SvgPicture.asset(
-                            "assets/icons/Meditation_women_small.svg",
-                          ),
-                          SizedBox(width: 20),
-                          Expanded(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Text(
-                                  "DCCDS",
-                                  // ignore: deprecated_member_use
-                                  style: Theme.of(context).textTheme.subtitle,
-                                ),
-                                Text(
-                                    "Everyday a child walks thorugh the door and experiances change."
-                                    " Let us be the first thing they see. Growing together to make amaerica great again.")
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.all(5),
-                            child: IconButton(
-                              icon: Icon(Icons.chevron_right),
-                              onPressed: () {},
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    // Another type of widget
+                    // Special Made Widgets
+                    // Big Brothers Big Sisters
                     Container(
                       margin: EdgeInsets.symmetric(vertical: 10),
                       padding: EdgeInsets.all(10),
@@ -255,15 +154,94 @@ class ActiviesDetail extends StatelessWidget {
                         color: Colors.transparent,
                         child: InkWell(
                           onTap: () {
-                            MaterialPageRoute(
-                              builder: (context) {
-                                return BigBroBigSis();
-                              },
-                            );
-                            //Ended here following Category_card.dart when setting it up.
-                            //Not finished
-                            //Page route not working
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => BigBroBigSis()));
                           },
+                          child: Row(
+                            children: [
+                              SvgPicture.asset(
+                                "assets/icons/Meditation_women_small.svg",
+                              ),
+                              SizedBox(width: 20),
+                              Expanded(
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(
+                                      "Big Brother Big Sisters",
+                                      // ignore: deprecated_member_use
+                                      style:
+                                          // ignore: deprecated_member_use
+                                          Theme.of(context).textTheme.subtitle,
+                                    ),
+                                    Text(
+                                        "We partner with parents/guardians, volunteers, and donors"
+                                        " to provide children with strong  enduring, professionally supported one-to-one relationships.")
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    //Explorium Children's Museum
+                    Container(
+                      margin: EdgeInsets.symmetric(vertical: 10),
+                      padding: EdgeInsets.all(10),
+                      height: 165,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(13),
+                        boxShadow: [
+                          BoxShadow(
+                            offset: Offset(0, 17),
+                            blurRadius: 17,
+                            spreadRadius: -23,
+                            color: kShadowColor,
+                          ),
+                        ],
+                      ),
+                      child: Material(
+                        color: Colors.transparent,
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ExploriumMuseum()));
+                          },
+                          child: Row(
+                            children: [
+                              SvgPicture.asset(
+                                "assets/icons/Meditation_women_small.svg",
+                              ),
+                              SizedBox(width: 20),
+                              Expanded(
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(
+                                      "Explorium Children's Museum",
+                                      // ignore: deprecated_member_use
+                                      style:
+                                          // ignore: deprecated_member_use
+                                          Theme.of(context).textTheme.subtitle,
+                                    ),
+                                    Text(
+                                        "We believe that children should be able to explore their curiosities in a safe environment. "
+                                        "We want to provide opportunities for children to experience the wonder and excitement of diffrent career fields.")
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
