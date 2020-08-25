@@ -90,7 +90,7 @@ class SchoolsDetail extends StatelessWidget {
                     //Soon to be changed to be dynamic with the days
                     Center(
                       child: Text(
-                        "Activities",
+                        "Education",
                         style: TextStyle(
                           fontWeight: FontWeight.w900,
                           fontSize: 20,
@@ -113,7 +113,7 @@ class SchoolsDetail extends StatelessWidget {
                       height: size.height * 0.05,
                     ),
                     Text(
-                      "Schools",
+                      "Education",
                       style: TextStyle(fontWeight: FontWeight.w900),
                     ),
                     SizedBox(height: 10),
