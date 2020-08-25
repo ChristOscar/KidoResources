@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kidoresources/constants.dart';
-import 'package:kidoresources/details_food/Serve_Denton.dart';
+import 'package:kidoresources/details_schools/Dccds.dart';
 import 'package:kidoresources/screens/CalenderScreen.dart';
 import 'package:kidoresources/screens/HomeScreen.dart';
 import 'package:kidoresources/widgets/Navigation_bar.dart';
 import 'package:kidoresources/widgets/search_bar.dart';
 
-class FoodDetail extends StatelessWidget {
+class SchoolsDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -53,9 +53,9 @@ class FoodDetail extends StatelessWidget {
           Container(
             height: size.height * .65,
             decoration: BoxDecoration(
-              color: Colors.red[200],
+              color: Colors.purple[100],
               image: DecorationImage(
-                image: AssetImage("assets/images/foodumm.png"),
+                image: AssetImage("assets/images/ummschool.png"),
                 fit: BoxFit.fitWidth,
               ),
             ),
@@ -70,16 +70,18 @@ class FoodDetail extends StatelessWidget {
                     alignment: Alignment(-1, -1),
                     onPressed: () {
                       Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => HomeScreen()));
+                        context,
+                        MaterialPageRoute(builder: (context) {
+                          return HomeScreen();
+                        }),
+                      );
                     }),
               ],
             ),
           ),
           SafeArea(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
               child: SingleChildScrollView(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -88,7 +90,7 @@ class FoodDetail extends StatelessWidget {
                     //Soon to be changed to be dynamic with the days
                     Center(
                       child: Text(
-                        "Food Resources",
+                        "Activities",
                         style: TextStyle(
                           fontWeight: FontWeight.w900,
                           fontSize: 20,
@@ -111,7 +113,7 @@ class FoodDetail extends StatelessWidget {
                       height: size.height * 0.05,
                     ),
                     Text(
-                      "Food",
+                      "Schools",
                       style: TextStyle(fontWeight: FontWeight.w900),
                     ),
                     SizedBox(height: 10),
@@ -120,8 +122,9 @@ class FoodDetail extends StatelessWidget {
                       width:
                           size.width * .62, // it just take 60% of total width
                       child: Text(
-                        "Everyone no matter you postion or soical class should be entilited to "
-                        "Having food in their bellies and love all around.",
+                        "The most valuable thing we have is time and attention. If time is the most valuable and"
+                        " precious thing we have, it's also the most precious thing we can give. Every day you give that to a student,"
+                        " a student that may not get much of anyone's time or attention.",
                       ),
                     ),
                     SizedBox(
@@ -129,7 +132,8 @@ class FoodDetail extends StatelessWidget {
                       child: SearchBar(),
                     ),
                     SizedBox(height: 10),
-                    //Serve Denton
+                    // Special Made Widgets
+                    // Big Brothers Big Sisters
                     Container(
                       margin: EdgeInsets.symmetric(vertical: 10),
                       padding: EdgeInsets.all(10),
@@ -153,12 +157,12 @@ class FoodDetail extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => ServeDenton()));
+                                    builder: (context) => Dccds()));
                           },
                           child: Row(
                             children: [
                               SvgPicture.asset(
-                                "assets/icons/Meditation_women_small.svg",
+                                "assets/icons/Booklover4.svg",
                               ),
                               SizedBox(width: 20),
                               Expanded(
@@ -168,67 +172,15 @@ class FoodDetail extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
                                     Text(
-                                      "Serve Denton",
+                                      "Denton County City Day School",
                                       // ignore: deprecated_member_use
                                       style:
                                           // ignore: deprecated_member_use
                                           Theme.of(context).textTheme.subtitle,
                                     ),
                                     Text(
-                                        "The Denton Hunger Coalition and Tarrant Area Food Bank partner together to bring the "
-                                        "Denton Mobile Pantry to the First Baptist Denton parking lot every second Saturday of the month.")
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    //Denton Community Food Center
-                    Container(
-                      margin: EdgeInsets.symmetric(vertical: 10),
-                      padding: EdgeInsets.all(10),
-                      height: 165,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(13),
-                        boxShadow: [
-                          BoxShadow(
-                            offset: Offset(0, 17),
-                            blurRadius: 17,
-                            spreadRadius: -23,
-                            color: kShadowColor,
-                          ),
-                        ],
-                      ),
-                      child: Material(
-                        color: Colors.transparent,
-                        child: InkWell(
-                          onTap: () {},
-                          child: Row(
-                            children: [
-                              SvgPicture.asset(
-                                "assets/icons/Meditation_women_small.svg",
-                              ),
-                              SizedBox(width: 20),
-                              Expanded(
-                                child: Column(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Text(
-                                      "Denton Community Food Center",
-                                      // ignore: deprecated_member_use
-                                      style:
-                                          // ignore: deprecated_member_use
-                                          Theme.of(context).textTheme.subtitle,
-                                    ),
-                                    Text(
-                                        "Founded in 1974, the Food Center has had as its mission to provide food"
-                                        "from a central community storehouse to needy families and individuals "
-                                        "stuggling with hunger insecurity")
+                                        "Denton City County Day School mission is to support a diverse, multicultural community."
+                                        " Special emphasis and attention are placed on serving children from low to middle income families. ")
                                   ],
                                 ),
                               ),

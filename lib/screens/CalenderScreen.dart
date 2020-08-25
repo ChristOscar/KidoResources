@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kidoresources/details_calender/New_addtions.dart';
 import 'package:kidoresources/screens/HomeScreen.dart';
 import 'package:kidoresources/widgets/Calender_widget.dart';
 import 'package:kidoresources/widgets/Category_Card.dart';
@@ -92,7 +93,7 @@ class CalenderScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                
+
                   //Info Card to be placed here with new additions and update
                   Expanded(
                     child: GridView.count(
@@ -105,7 +106,12 @@ class CalenderScreen extends StatelessWidget {
                           title: "New Additions",
                           text: "Welcome DCCDS to Kido Resources",
                           svgSrc: "assets/icons/Hamburger.svg",
-                          press: () {},
+                          press: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => NewAddtions()));
+                          },
                         ),
                       ],
                     ),
