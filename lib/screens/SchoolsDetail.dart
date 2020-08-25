@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kidoresources/constants.dart';
-import 'package:kidoresources/details_activies/Big_brothers_big_sisters.dart';
-import 'package:kidoresources/details_activies/Explorium_Museum.dart';
+import 'package:kidoresources/details_schools/Dccds.dart';
 import 'package:kidoresources/screens/CalenderScreen.dart';
 import 'package:kidoresources/screens/HomeScreen.dart';
 import 'package:kidoresources/widgets/Navigation_bar.dart';
 import 'package:kidoresources/widgets/search_bar.dart';
 
-class ActiviesDetail extends StatelessWidget {
+class SchoolsDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -54,9 +53,9 @@ class ActiviesDetail extends StatelessWidget {
           Container(
             height: size.height * .65,
             decoration: BoxDecoration(
-              color: Colors.lightBlue[200],
+              color: Colors.purple[100],
               image: DecorationImage(
-                image: AssetImage("assets/images/meditation_bg.png"),
+                image: AssetImage("assets/images/ummschool.png"),
                 fit: BoxFit.fitWidth,
               ),
             ),
@@ -91,7 +90,7 @@ class ActiviesDetail extends StatelessWidget {
                     //Soon to be changed to be dynamic with the days
                     Center(
                       child: Text(
-                        "Activities",
+                        "Education",
                         style: TextStyle(
                           fontWeight: FontWeight.w900,
                           fontSize: 20,
@@ -114,7 +113,7 @@ class ActiviesDetail extends StatelessWidget {
                       height: size.height * 0.05,
                     ),
                     Text(
-                      "Activities",
+                      "Education",
                       style: TextStyle(fontWeight: FontWeight.w900),
                     ),
                     SizedBox(height: 10),
@@ -123,8 +122,9 @@ class ActiviesDetail extends StatelessWidget {
                       width:
                           size.width * .62, // it just take 60% of total width
                       child: Text(
-                        "Live happoer and healthier by having fun and keeping active.\n"
-                        "Fun Fact: Working out and having fun sharpens memory and brain activity!",
+                        "The most valuable thing we have is time and attention. If time is the most valuable and"
+                        " precious thing we have, it's also the most precious thing we can give. Every day you give that to a student,"
+                        " a student that may not get much of anyone's time or attention.",
                       ),
                     ),
                     SizedBox(
@@ -157,12 +157,12 @@ class ActiviesDetail extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => BigBroBigSis()));
+                                    builder: (context) => Dccds()));
                           },
                           child: Row(
                             children: [
                               SvgPicture.asset(
-                                "assets/icons/Meditation_women_small.svg",
+                                "assets/icons/Booklover4.svg",
                               ),
                               SizedBox(width: 20),
                               Expanded(
@@ -172,71 +172,15 @@ class ActiviesDetail extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
                                     Text(
-                                      "Big Brother Big Sisters",
+                                      "Denton County City Day School",
                                       // ignore: deprecated_member_use
                                       style:
                                           // ignore: deprecated_member_use
                                           Theme.of(context).textTheme.subtitle,
                                     ),
                                     Text(
-                                        "We partner with parents/guardians, volunteers, and donors"
-                                        " to provide children with strong  enduring, professionally supported one-to-one relationships.")
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    //Explorium Children's Museum
-                    Container(
-                      margin: EdgeInsets.symmetric(vertical: 10),
-                      padding: EdgeInsets.all(10),
-                      height: 165,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(13),
-                        boxShadow: [
-                          BoxShadow(
-                            offset: Offset(0, 17),
-                            blurRadius: 17,
-                            spreadRadius: -23,
-                            color: kShadowColor,
-                          ),
-                        ],
-                      ),
-                      child: Material(
-                        color: Colors.transparent,
-                        child: InkWell(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => ExploriumMuseum()));
-                          },
-                          child: Row(
-                            children: [
-                              SvgPicture.asset(
-                                "assets/icons/Meditation_women_small.svg",
-                              ),
-                              SizedBox(width: 20),
-                              Expanded(
-                                child: Column(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Text(
-                                      "Explorium Children's Museum",
-                                      // ignore: deprecated_member_use
-                                      style:
-                                          // ignore: deprecated_member_use
-                                          Theme.of(context).textTheme.subtitle,
-                                    ),
-                                    Text(
-                                        "We believe that children should be able to explore their curiosities in a safe environment. "
-                                        "We want to provide opportunities for children to experience the wonder and excitement of diffrent career fields.")
+                                        "Denton City County Day School mission is to support a diverse, multicultural community."
+                                        " Special emphasis and attention are placed on serving children from low to middle income families. ")
                                   ],
                                 ),
                               ),

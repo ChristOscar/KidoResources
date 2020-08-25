@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kidoresources/screens/ActiviesDetail.dart';
 import 'package:kidoresources/screens/CalenderScreen.dart';
 import 'package:kidoresources/screens/FoodDetail.dart';
+import 'package:kidoresources/screens/SchoolsDetail.dart';
 import 'package:kidoresources/widgets/Category_Card.dart';
 import 'package:kidoresources/widgets/Navigation_bar.dart';
 import 'package:kidoresources/widgets/search_bar.dart';
@@ -101,6 +102,19 @@ class HomeScreen extends StatelessWidget {
                               context,
                               MaterialPageRoute(builder: (context) {
                                 return ActiviesDetail();
+                              }),
+                            );
+                          },
+                        ),
+                        CatagoryCard(
+                          title: "Schools",
+                          text: '',
+                          svgSrc: "assets/icons/Booklover4.svg",
+                          press: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) {
+                                return SchoolsDetail();
                               }),
                             );
                           },
