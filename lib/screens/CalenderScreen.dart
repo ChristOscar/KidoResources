@@ -87,7 +87,7 @@ class CalenderScreen extends StatelessWidget {
                       crossAxisCount: 1,
                       childAspectRatio: .5,
                       crossAxisSpacing: 50,
-                      mainAxisSpacing: 30,
+                      mainAxisSpacing: 50,
                       children: <Widget>[
                         CalenderWidget(),
                       ],
@@ -100,7 +100,7 @@ class CalenderScreen extends StatelessWidget {
                       crossAxisCount: 1,
                       childAspectRatio: 2.3,
                       crossAxisSpacing: 50,
-                      mainAxisSpacing: 10,
+                      mainAxisSpacing: 50,
                       children: <Widget>[
                         CatagoryCard(
                           title: "New Additions",
