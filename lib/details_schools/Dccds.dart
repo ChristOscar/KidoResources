@@ -1,9 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:kidoresources/screens/CalenderScreen.dart';
-import 'package:kidoresources/screens/HomeScreen.dart';
-import 'package:kidoresources/widgets/Navigation_bar.dart';
-
-import 'package:flutter/material.dart';
 import 'package:kidoresources/constants.dart';
 
 class Dccds extends StatelessWidget {
