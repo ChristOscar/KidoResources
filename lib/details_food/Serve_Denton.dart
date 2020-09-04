@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:kidoresources/constants.dart';
-import 'package:kidoresources/screens/FoodDetail.dart';
 
 class ServeDenton extends StatelessWidget {
   @override
@@ -27,12 +26,7 @@ class ServeDenton extends StatelessWidget {
                     icon: Icon(Icons.chevron_left),
                     alignment: Alignment(-1, -1),
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) {
-                          return FoodDetail();
-                        }),
-                      );
+                      Navigator.pop(context);
                     }),
               ],
             ),

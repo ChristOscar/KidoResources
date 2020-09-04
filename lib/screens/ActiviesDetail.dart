@@ -70,12 +70,7 @@ class ActiviesDetail extends StatelessWidget {
                     icon: Icon(Icons.chevron_left),
                     alignment: Alignment(-1, -1),
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) {
-                          return HomeScreen();
-                        }),
-                      );
+                      Navigator.pop(context);
                     }),
               ],
             ),

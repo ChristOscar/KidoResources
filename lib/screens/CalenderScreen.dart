@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:kidoresources/details_calender/New_addtions.dart';
-import 'package:kidoresources/screens/HomeScreen.dart';
 import 'package:kidoresources/widgets/Calender_widget.dart';
 import 'package:kidoresources/widgets/Category_Card.dart';
 import 'package:kidoresources/widgets/Navigation_bar.dart';
@@ -21,26 +20,14 @@ class CalenderScreen extends StatelessWidget {
               title: "Home",
               svgSrc: "assets/icons/Icon_home.svg",
               press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) {
-                    return HomeScreen();
-                  }),
-                );
+                Navigator.pop(context);
               },
               isActive: false,
             ),
             BottomNavigation(
               title: "Today",
               svgSrc: "assets/icons/Icon_calendar.svg",
-              press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) {
-                    return CalenderScreen();
-                  }),
-                );
-              },
+              press: () {},
               isActive: true,
             ),
           ],
