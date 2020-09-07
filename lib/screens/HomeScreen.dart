@@ -12,6 +12,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
+      //NavBar
       bottomNavigationBar: Container(
         padding: EdgeInsets.symmetric(horizontal: 70, vertical: 10),
         height: 70,
@@ -22,14 +23,7 @@ class HomeScreen extends StatelessWidget {
             BottomNavigation(
               title: "Home",
               svgSrc: "assets/icons/Icon_home.svg",
-              press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) {
-                    return HomeScreen();
-                  }),
-                );
-              },
+              press: () {},
               isActive: true,
             ),
             BottomNavigation(
@@ -50,6 +44,7 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Stack(
         children: <Widget>[
+          //Background Picture
           Container(
             height: size.height * .45,
             decoration: BoxDecoration(
@@ -65,6 +60,7 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
+                  //Title
                   Text(
                     "\nWelcome to \nKIDO Resources",
                     style: TextStyle(
@@ -72,7 +68,9 @@ class HomeScreen extends StatelessWidget {
                       fontSize: 35,
                     ),
                   ),
+                  //Search Bar
                   SearchBar(),
+                  //Tiles for Navigation
                   Expanded(
                     child: GridView.count(
                       crossAxisCount: 2,
