@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kidoresources/constants.dart';
+import 'package:kidoresources/details_food/DentonCommunity_FoodCenter.dart';
 import 'package:kidoresources/details_food/Serve_Denton.dart';
 import 'package:kidoresources/screens/CalenderScreen.dart';
-import 'package:kidoresources/screens/HomeScreen.dart';
 import 'package:kidoresources/widgets/Navigation_bar.dart';
 import 'package:kidoresources/widgets/search_bar.dart';
 
@@ -12,6 +12,7 @@ class FoodDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
+      //NavBar
       bottomNavigationBar: Container(
         padding: EdgeInsets.symmetric(horizontal: 70, vertical: 10),
         height: 70,
@@ -23,12 +24,7 @@ class FoodDetail extends StatelessWidget {
               title: "Home",
               svgSrc: "assets/icons/Icon_home.svg",
               press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) {
-                    return HomeScreen();
-                  }),
-                );
+                Navigator.pop(context);
               },
               isActive: false,
             ),
@@ -202,7 +198,12 @@ class FoodDetail extends StatelessWidget {
                       child: Material(
                         color: Colors.transparent,
                         child: InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => DCommunityFood()));
+                          },
                           child: Row(
                             children: [
                               SvgPicture.asset(
