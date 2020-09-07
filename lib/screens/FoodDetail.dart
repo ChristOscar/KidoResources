@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kidoresources/constants.dart';
+import 'package:kidoresources/details_food/DentonCommunity_FoodCenter.dart';
 import 'package:kidoresources/details_food/Serve_Denton.dart';
 import 'package:kidoresources/screens/CalenderScreen.dart';
 import 'package:kidoresources/screens/HomeScreen.dart';
@@ -202,7 +203,12 @@ class FoodDetail extends StatelessWidget {
                       child: Material(
                         color: Colors.transparent,
                         child: InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => DCommunityFood()));
+                          },
                           child: Row(
                             children: [
                               SvgPicture.asset(

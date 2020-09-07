@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kidoresources/constants.dart';
 
-class NewAddtions extends StatelessWidget {
+class DCommunityCovid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
         children: [
           Container(
-            height: 150,
+            height: 250,
             decoration: BoxDecoration(
-              color: Colors.lightGreen[300],
+              color: Colors.red[200],
               image: DecorationImage(
                 image: AssetImage("assets/images/undraw_pilates_gpdb.png"),
                 fit: BoxFit.fitWidth,
@@ -44,10 +43,10 @@ class NewAddtions extends StatelessWidget {
                     //Soon to be changed to be dynamic with the days
                     Center(
                       child: Text(
-                        "New Addtions",
+                        "Covid-19 Responce",
                         style: TextStyle(
                           fontWeight: FontWeight.w900,
-                          fontSize: 35,
+                          fontSize: 28,
                         ),
                       ),
                     ),
@@ -68,13 +67,13 @@ class NewAddtions extends StatelessWidget {
                       height: 30,
                     ),
                     // Special Made Widgets
-                    // Big Brothers Big Sisters
+                    // Covid Alerts
                     Container(
                       margin: EdgeInsets.symmetric(vertical: 10),
                       padding: EdgeInsets.all(10),
-                      height: 225,
+                      height: 450,
                       decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: Colors.grey[200],
                         borderRadius: BorderRadius.circular(13),
                         boxShadow: [
                           BoxShadow(
@@ -91,9 +90,6 @@ class NewAddtions extends StatelessWidget {
                           onTap: () {},
                           child: Row(
                             children: [
-                              SvgPicture.asset(
-                                "assets/icons/Booklover4.svg",
-                              ),
                               SizedBox(width: 20),
                               Expanded(
                                 child: Column(
@@ -102,17 +98,21 @@ class NewAddtions extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
                                     Text(
-                                      "Denton City County Day School",
-                                      // ignore: deprecated_member_use
-                                      style: TextStyle(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w900,
-                                      ),
-                                    ),
-                                    Text(
-                                        "With the recent addtion of Denton City County Day School, we can proudly announce our involment within the school system."
-                                        "With this addition we are now able to spread our resources and ensure that parents are learning about our app."
-                                        "Thank you to everyone that has helped us accomplish this goal.")
+                                        "The Board of the Denton Community Food Center is committed to taking extra "
+                                        "precautions to keep our volunteers, clients and food supply safe.  We are closely "
+                                        "monitoring the latest developments related to COVID 19 and following the guidelines of "
+                                        "government and public health officials.\n"
+                                        "We are cleaning and sanitizing surfaces regularly and asking that everyone "
+                                        "wash their hands often and thoroughly.  Please stay home if you are feeling ill.\n"
+                                        "As necessary, we are preparing to make adjustments in the distribution of "
+                                        "food in order to reduce contact and protect vulnerable individuals in our community. "
+                                        "See details regarding our Drive Thru Distribution process and other adjustment elsewhere "
+                                        "on this site.\n"
+                                        "We anticipate seeing a larger number of families with school age children "
+                                        "requiring food as they may be missing out on school breakfast "
+                                        "and lunch programs.\n​"
+                                        "Your donation will go far in helping us meeting this increased demand.\n​"
+                                        "Our sincerest thanks for your support")
                                   ],
                                 ),
                               ),

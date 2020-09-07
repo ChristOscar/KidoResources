@@ -66,7 +66,7 @@ class HomeScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    "\nWelcome to \nKido Resources",
+                    "\nWelcome to \nKIDO Resources",
                     style: TextStyle(
                       fontWeight: FontWeight.w900,
                       fontSize: 35,
