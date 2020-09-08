@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kidoresources/constants.dart';
 import 'package:kidoresources/details_schools/Dccds.dart';
+import 'package:kidoresources/details_schools/FredMoore.dart';
 import 'package:kidoresources/screens/CalenderScreen.dart';
-import 'package:kidoresources/screens/HomeScreen.dart';
 import 'package:kidoresources/widgets/Navigation_bar.dart';
 import 'package:kidoresources/widgets/search_bar.dart';
 
@@ -12,6 +12,7 @@ class SchoolsDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
+      //NavBar
       bottomNavigationBar: Container(
         padding: EdgeInsets.symmetric(horizontal: 70, vertical: 10),
         height: 70,
@@ -23,12 +24,7 @@ class SchoolsDetail extends StatelessWidget {
               title: "Home",
               svgSrc: "assets/icons/Icon_home.svg",
               press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) {
-                    return HomeScreen();
-                  }),
-                );
+                Navigator.pop(context);
               },
               isActive: false,
             ),
@@ -51,6 +47,7 @@ class SchoolsDetail extends StatelessWidget {
       body: Stack(
         children: <Widget>[
           Container(
+            //Background Image
             height: size.height * .65,
             decoration: BoxDecoration(
               color: Colors.purple[100],
@@ -128,7 +125,61 @@ class SchoolsDetail extends StatelessWidget {
                     ),
                     SizedBox(height: 10),
                     // Special Made Widgets
-                    // Big Brothers Big Sisters
+                    // Fred Moore Day Nursery School
+                    Container(
+                      margin: EdgeInsets.symmetric(vertical: 10),
+                      padding: EdgeInsets.all(10),
+                      height: 165,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(13),
+                        boxShadow: [
+                          BoxShadow(
+                            offset: Offset(0, 17),
+                            blurRadius: 17,
+                            spreadRadius: -23,
+                            color: kShadowColor,
+                          ),
+                        ],
+                      ),
+                      child: Material(
+                        color: Colors.transparent,
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => FredMoore()));
+                          },
+                          child: Row(
+                            children: [
+                              SvgPicture.asset(
+                                "assets/icons/Booklover4.svg",
+                              ),
+                              SizedBox(width: 20),
+                              Expanded(
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(
+                                      "Fred Moore Day Nursery School",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    Text(
+                                        "Fred Moore Day Nursery Schoolprovide low income families in our community "
+                                        "with comprehensive, affordable and well- balanced care for children.")
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    // Denton City County Day School
                     Container(
                       margin: EdgeInsets.symmetric(vertical: 10),
                       padding: EdgeInsets.all(10),
@@ -168,10 +219,8 @@ class SchoolsDetail extends StatelessWidget {
                                   children: <Widget>[
                                     Text(
                                       "Denton County City Day School",
-                                      // ignore: deprecated_member_use
-                                      style:
-                                          // ignore: deprecated_member_use
-                                          Theme.of(context).textTheme.subtitle,
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold),
                                     ),
                                     Text(
                                         "Denton City County Day School mission is to support a diverse, multicultural community."

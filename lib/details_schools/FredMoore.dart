@@ -1,59 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kidoresources/constants.dart';
-import 'package:kidoresources/details_food/DentonCommunity_FoodCenter.dart';
-import 'package:kidoresources/details_food/FirstRefugeMinistries.dart';
-import 'package:kidoresources/details_food/Serve_Denton.dart';
-import 'package:kidoresources/screens/CalenderScreen.dart';
-import 'package:kidoresources/widgets/Navigation_bar.dart';
-import 'package:kidoresources/widgets/search_bar.dart';
 
-class FoodDetail extends StatelessWidget {
+class FredMoore extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
     return Scaffold(
-      //NavBar
-      bottomNavigationBar: Container(
-        padding: EdgeInsets.symmetric(horizontal: 70, vertical: 10),
-        height: 70,
-        color: Colors.grey[200],
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            BottomNavigation(
-              title: "Home",
-              svgSrc: "assets/icons/Icon_home.svg",
-              press: () {
-                Navigator.pop(context);
-              },
-              isActive: false,
-            ),
-            BottomNavigation(
-              title: "Today",
-              svgSrc: "assets/icons/Icon_calendar.svg",
-              press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) {
-                    return CalenderScreen();
-                  }),
-                );
-              },
-              isActive: false,
-            ),
-          ],
-        ),
-      ),
       body: Stack(
-        children: <Widget>[
-          //Food Image Background
+        children: [
+          //Background image
           Container(
-            height: size.height * .65,
+            height: 350,
             decoration: BoxDecoration(
               color: Colors.red[200],
               image: DecorationImage(
-                image: AssetImage("assets/images/foodumm.png"),
+                image: AssetImage("assets/images/ummschool.png"),
                 fit: BoxFit.fitWidth,
               ),
             ),
@@ -72,9 +32,10 @@ class FoodDetail extends StatelessWidget {
               ],
             ),
           ),
+          //Title
           SafeArea(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
               child: SingleChildScrollView(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -83,10 +44,10 @@ class FoodDetail extends StatelessWidget {
                     //Soon to be changed to be dynamic with the days
                     Center(
                       child: Text(
-                        "Food Resources",
+                        "Fred Moore Day Nursery School",
                         style: TextStyle(
                           fontWeight: FontWeight.w900,
-                          fontSize: 20,
+                          fontSize: 18,
                         ),
                       ),
                     ),
@@ -95,40 +56,23 @@ class FoodDetail extends StatelessWidget {
               ),
             ),
           ),
+          Spacer(),
           SafeArea(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 30),
               child: SingleChildScrollView(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     SizedBox(
-                      height: size.height * 0.05,
+                      height: 200,
                     ),
-                    Text(
-                      "Food",
-                      style: TextStyle(fontWeight: FontWeight.w900),
-                    ),
-                    SizedBox(height: 10),
-                    SizedBox(height: 10),
-                    SizedBox(
-                      width:
-                          size.width * .62, // it just take 60% of total width
-                      child: Text(
-                        "Everyone no matter you postion or soical class should be entilited to "
-                        "Having food in their bellies and love all around.",
-                      ),
-                    ),
-                    SizedBox(
-                      width: size.width * .5, // it just take the 50% width
-                      child: SearchBar(),
-                    ),
-                    SizedBox(height: 10),
-                    //Serve Denton
+                    // Special Made Widgets
+                    // Our Mission
                     Container(
                       margin: EdgeInsets.symmetric(vertical: 10),
                       padding: EdgeInsets.all(10),
-                      height: 165,
+                      height: 150,
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(13),
@@ -144,17 +88,9 @@ class FoodDetail extends StatelessWidget {
                       child: Material(
                         color: Colors.transparent,
                         child: InkWell(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => ServeDenton()));
-                          },
+                          onTap: () {},
                           child: Row(
                             children: [
-                              SvgPicture.asset(
-                                "assets/icons/Meditation_women_small.svg",
-                              ),
                               SizedBox(width: 20),
                               Expanded(
                                 child: Column(
@@ -162,16 +98,20 @@ class FoodDetail extends StatelessWidget {
                                       MainAxisAlignment.spaceEvenly,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
-                                    Text(
-                                      "Serve Denton",
-                                      // ignore: deprecated_member_use
-                                      style:
-                                          // ignore: deprecated_member_use
-                                          Theme.of(context).textTheme.subtitle,
+                                    Center(
+                                      child: Text(
+                                        "Our Goal",
+                                        // ignore: deprecated_member_use
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.w900,
+                                        ),
+                                      ),
                                     ),
                                     Text(
-                                        "The Denton Hunger Coalition and Tarrant Area Food Bank partner together to bring the "
-                                        "Denton Mobile Pantry to the First Baptist Denton parking lot every second Saturday of the month.")
+                                        "Our mission is to provide low income families in our community with comprehensive, "
+                                        "affordable and well- balanced care for children 6 weeks old to 5 years old year-round, "
+                                        "and up to 8 years old during the summer.")
                                   ],
                                 ),
                               ),
@@ -180,11 +120,11 @@ class FoodDetail extends StatelessWidget {
                         ),
                       ),
                     ),
-                    //Denton Community Food Center
+                    // Location
                     Container(
                       margin: EdgeInsets.symmetric(vertical: 10),
                       padding: EdgeInsets.all(10),
-                      height: 165,
+                      height: 75,
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(13),
@@ -200,17 +140,9 @@ class FoodDetail extends StatelessWidget {
                       child: Material(
                         color: Colors.transparent,
                         child: InkWell(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => DCommunityFood()));
-                          },
+                          onTap: () {},
                           child: Row(
                             children: [
-                              SvgPicture.asset(
-                                "assets/icons/Meditation_women_small.svg",
-                              ),
                               SizedBox(width: 20),
                               Expanded(
                                 child: Column(
@@ -218,17 +150,19 @@ class FoodDetail extends StatelessWidget {
                                       MainAxisAlignment.spaceEvenly,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
-                                    Text(
-                                      "Denton Community Food Center",
-                                      // ignore: deprecated_member_use
-                                      style:
-                                          // ignore: deprecated_member_use
-                                          Theme.of(context).textTheme.subtitle,
+                                    Center(
+                                      child: Text(
+                                        "Location",
+                                        // ignore: deprecated_member_use
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.w900,
+                                        ),
+                                      ),
                                     ),
-                                    Text(
-                                        "Founded in 1974, the Food Center has had as its mission to provide food"
-                                        "from a central community storehouse to needy families and individuals "
-                                        "stuggling with hunger insecurity")
+                                    Center(
+                                        child: Text(
+                                            "1212 Long Road Denton tx 76207")),
                                   ],
                                 ),
                               ),
@@ -237,11 +171,11 @@ class FoodDetail extends StatelessWidget {
                         ),
                       ),
                     ),
-                    //First Refuge Ministries
+                    // Schedule
                     Container(
                       margin: EdgeInsets.symmetric(vertical: 10),
                       padding: EdgeInsets.all(10),
-                      height: 165,
+                      height: 100,
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(13),
@@ -257,18 +191,9 @@ class FoodDetail extends StatelessWidget {
                       child: Material(
                         color: Colors.transparent,
                         child: InkWell(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        FirstRefugeMinistries()));
-                          },
+                          onTap: () {},
                           child: Row(
                             children: [
-                              SvgPicture.asset(
-                                "assets/icons/Meditation_women_small.svg",
-                              ),
                               SizedBox(width: 20),
                               Expanded(
                                 child: Column(
@@ -276,16 +201,18 @@ class FoodDetail extends StatelessWidget {
                                       MainAxisAlignment.spaceEvenly,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
-                                    Text(
-                                      "First Refuge Ministries",
-                                      // ignore: deprecated_member_use
-                                      style:
-                                          // ignore: deprecated_member_use
-                                          Theme.of(context).textTheme.subtitle,
+                                    Center(
+                                      child: Text(
+                                        "Schedule",
+                                        // ignore: deprecated_member_use
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.w900,
+                                        ),
+                                      ),
                                     ),
-                                    Text(
-                                        "First Refuge Food Pantry is a Choice Pantry this method provides the client "
-                                        "an opportunity to choose foods based upon their dietary needs.")
+                                    Center(
+                                        child: Text("6AM-6PM Monday-Friday")),
                                   ],
                                 ),
                               ),
@@ -294,7 +221,56 @@ class FoodDetail extends StatelessWidget {
                         ),
                       ),
                     ),
-                    //New
+                    // Contact
+                    Container(
+                      margin: EdgeInsets.symmetric(vertical: 10),
+                      padding: EdgeInsets.all(10),
+                      height: 85,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(13),
+                        boxShadow: [
+                          BoxShadow(
+                            offset: Offset(0, 17),
+                            blurRadius: 17,
+                            spreadRadius: -23,
+                            color: kShadowColor,
+                          ),
+                        ],
+                      ),
+                      child: Material(
+                        color: Colors.transparent,
+                        child: InkWell(
+                          onTap: () {},
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Center(
+                                      child: Text(
+                                        "Contact Information",
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.w900,
+                                        ),
+                                      ),
+                                    ),
+                                    Center(
+                                        child:
+                                            Text("Phone Number: 940-369-2340"))
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    // Video or More Information
                   ],
                 ),
               ),

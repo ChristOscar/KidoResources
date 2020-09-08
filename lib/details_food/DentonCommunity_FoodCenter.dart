@@ -172,7 +172,7 @@ class DCommunityFood extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 15),
-                    //Serve Deton Logo
+                    //Logo
                     // Container(
                     //   margin: EdgeInsets.symmetric(vertical: 5),
                     //   padding: EdgeInsets.all(10),
