@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kidoresources/constants.dart';
 
-class BigBroBigSis extends StatelessWidget {
+class GirlScoutNortheastTexas extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,10 +44,10 @@ class BigBroBigSis extends StatelessWidget {
                     //Soon to be changed to be dynamic with the days
                     Center(
                       child: Text(
-                        "Big Brothers Big Sisters",
+                        "Girl Scouts of NorthEast Texas",
                         style: TextStyle(
                           fontWeight: FontWeight.w900,
-                          fontSize: 22,
+                          fontSize: 19,
                         ),
                       ),
                     ),
@@ -109,9 +109,8 @@ class BigBroBigSis extends StatelessWidget {
                                       ),
                                     ),
                                     Text(
-                                        "The Big Brother BIg SIster mission is to provide children facing adversity  "
-                                        "with strong and enduring, professioanlly supporteed 1-1 mentoring relationships "
-                                        "that change their lives for the better.")
+                                        "The mission of Girl Scouts is to build girls of courage, "
+                                        "confidence, and character, who make the world a better place.")
                                   ],
                                 ),
                               ),
@@ -160,10 +159,7 @@ class BigBroBigSis extends StatelessWidget {
                                         ),
                                       ),
                                     ),
-                                    Center(
-                                        child: Text(
-                                            "       Children 6-14 years old\n"
-                                            " Volunteers atleast 18 years old")),
+                                    Center(child: Text("Girls, 5-17 yrs old")),
                                   ],
                                 ),
                               ),
@@ -176,7 +172,7 @@ class BigBroBigSis extends StatelessWidget {
                     Container(
                       margin: EdgeInsets.symmetric(vertical: 10),
                       padding: EdgeInsets.all(10),
-                      height: 75,
+                      height: 100,
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(13),
@@ -214,7 +210,7 @@ class BigBroBigSis extends StatelessWidget {
                                     ),
                                     Center(
                                         child: Text(
-                                            "306 N. Loop 288, #107, Denton, TX 76209")),
+                                            " 6001 Summerside Dr. Dallas, TX 75252\n Denton Location: 2317 W University Dr. Suite\n 167 Denton, TX 75252")),
                                   ],
                                 ),
                               ),
@@ -265,8 +261,7 @@ class BigBroBigSis extends StatelessWidget {
                                     ),
                                     Center(
                                         child: Text(
-                                            "8:00AM - 5:00PM Monday-Friday\n"
-                                            "              Appointment Only")),
+                                            "9:00AM-5:00PM Monday-Thursday; 9:00AM-3:00PM Friday")),
                                   ],
                                 ),
                               ),
@@ -314,8 +309,8 @@ class BigBroBigSis extends StatelessWidget {
                                       ),
                                     ),
                                     Center(
-                                        child: Text(
-                                            "Phone Number: (888)887-BIGS(2447)"))
+                                        child:
+                                            Text("Phone Number: (972)394-2400"))
                                   ],
                                 ),
                               ),

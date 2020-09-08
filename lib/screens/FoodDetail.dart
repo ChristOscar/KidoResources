@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kidoresources/constants.dart';
 import 'package:kidoresources/details_food/DentonCommunity_FoodCenter.dart';
+import 'package:kidoresources/details_food/FirstRefugeMinistries.dart';
 import 'package:kidoresources/details_food/Serve_Denton.dart';
 import 'package:kidoresources/screens/CalenderScreen.dart';
 import 'package:kidoresources/widgets/Navigation_bar.dart';
@@ -46,6 +47,7 @@ class FoodDetail extends StatelessWidget {
       ),
       body: Stack(
         children: <Widget>[
+          //Food Image Background
           Container(
             height: size.height * .65,
             decoration: BoxDecoration(
@@ -235,6 +237,64 @@ class FoodDetail extends StatelessWidget {
                         ),
                       ),
                     ),
+                    //First Refuge Ministries
+                    Container(
+                      margin: EdgeInsets.symmetric(vertical: 10),
+                      padding: EdgeInsets.all(10),
+                      height: 165,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(13),
+                        boxShadow: [
+                          BoxShadow(
+                            offset: Offset(0, 17),
+                            blurRadius: 17,
+                            spreadRadius: -23,
+                            color: kShadowColor,
+                          ),
+                        ],
+                      ),
+                      child: Material(
+                        color: Colors.transparent,
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        FirstRefugeMinistries()));
+                          },
+                          child: Row(
+                            children: [
+                              SvgPicture.asset(
+                                "assets/icons/Meditation_women_small.svg",
+                              ),
+                              SizedBox(width: 20),
+                              Expanded(
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(
+                                      "First Refuge Ministries",
+                                      // ignore: deprecated_member_use
+                                      style:
+                                          // ignore: deprecated_member_use
+                                          Theme.of(context).textTheme.subtitle,
+                                    ),
+                                    Text(
+                                        "First Refuge Food Pantry is a Choice Pantry this method provides the client "
+                                        "an opportunity to choose foods based upon their dietary needs.")
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    //New
                   ],
                 ),
               ),

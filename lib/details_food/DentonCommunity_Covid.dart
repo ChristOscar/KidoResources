@@ -71,7 +71,7 @@ class DCommunityCovid extends StatelessWidget {
                     Container(
                       margin: EdgeInsets.symmetric(vertical: 10),
                       padding: EdgeInsets.all(10),
-                      height: 450,
+                      height: 470,
                       decoration: BoxDecoration(
                         color: Colors.grey[200],
                         borderRadius: BorderRadius.circular(13),

@@ -3,8 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kidoresources/constants.dart';
 import 'package:kidoresources/details_activies/Big_brothers_big_sisters.dart';
 import 'package:kidoresources/details_activies/Explorium_Museum.dart';
+import 'package:kidoresources/details_activies/GirlScoutNT.dart';
 import 'package:kidoresources/screens/CalenderScreen.dart';
-import 'package:kidoresources/screens/HomeScreen.dart';
 import 'package:kidoresources/widgets/Navigation_bar.dart';
 import 'package:kidoresources/widgets/search_bar.dart';
 
@@ -13,6 +13,7 @@ class ActiviesDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
+      //NavBar
       bottomNavigationBar: Container(
         padding: EdgeInsets.symmetric(horizontal: 70, vertical: 10),
         height: 70,
@@ -24,12 +25,7 @@ class ActiviesDetail extends StatelessWidget {
               title: "Home",
               svgSrc: "assets/icons/Icon_home.svg",
               press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) {
-                    return HomeScreen();
-                  }),
-                );
+                Navigator.pop(context);
               },
               isActive: false,
             ),
@@ -51,6 +47,7 @@ class ActiviesDetail extends StatelessWidget {
       ),
       body: Stack(
         children: <Widget>[
+          //Background Image
           Container(
             height: size.height * .65,
             decoration: BoxDecoration(
@@ -75,6 +72,7 @@ class ActiviesDetail extends StatelessWidget {
               ],
             ),
           ),
+          //Widgets
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
@@ -240,6 +238,63 @@ class ActiviesDetail extends StatelessWidget {
                         ),
                       ),
                     ),
+                    //Girl Scout of Northeast Texas
+                    Container(
+                      margin: EdgeInsets.symmetric(vertical: 10),
+                      padding: EdgeInsets.all(10),
+                      height: 175,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(13),
+                        boxShadow: [
+                          BoxShadow(
+                            offset: Offset(0, 17),
+                            blurRadius: 17,
+                            spreadRadius: -23,
+                            color: kShadowColor,
+                          ),
+                        ],
+                      ),
+                      child: Material(
+                        color: Colors.transparent,
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        GirlScoutNortheastTexas()));
+                          },
+                          child: Row(
+                            children: [
+                              SvgPicture.asset(
+                                "assets/icons/Meditation_women_small.svg",
+                              ),
+                              SizedBox(width: 20),
+                              Expanded(
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(
+                                      "Girl Scout of Northeast Texas ",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    Text(
+                                        "Girl Scouts of Northeast Texas inspires girls everywhere to stand up and make a "
+                                        "difference. By nurturing innovation and developing leadership skills, we prepare "
+                                        "girls to overcome challenges and advocate for their ideas now and later.")
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    //End Marker
                   ],
                 ),
               ),

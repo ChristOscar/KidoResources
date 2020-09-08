@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kidoresources/constants.dart';
 
-class BigBroBigSis extends StatelessWidget {
+class FredMoore extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,9 +11,9 @@ class BigBroBigSis extends StatelessWidget {
           Container(
             height: 350,
             decoration: BoxDecoration(
-              color: Colors.lightBlue[200],
+              color: Colors.red[200],
               image: DecorationImage(
-                image: AssetImage("assets/images/meditation_bg.png"),
+                image: AssetImage("assets/images/ummschool.png"),
                 fit: BoxFit.fitWidth,
               ),
             ),
@@ -44,10 +44,10 @@ class BigBroBigSis extends StatelessWidget {
                     //Soon to be changed to be dynamic with the days
                     Center(
                       child: Text(
-                        "Big Brothers Big Sisters",
+                        "Fred Moore Day Nursery School",
                         style: TextStyle(
                           fontWeight: FontWeight.w900,
-                          fontSize: 22,
+                          fontSize: 18,
                         ),
                       ),
                     ),
@@ -68,7 +68,7 @@ class BigBroBigSis extends StatelessWidget {
                       height: 200,
                     ),
                     // Special Made Widgets
-                    // Our Goal
+                    // Our Mission
                     Container(
                       margin: EdgeInsets.symmetric(vertical: 10),
                       padding: EdgeInsets.all(10),
@@ -109,61 +109,9 @@ class BigBroBigSis extends StatelessWidget {
                                       ),
                                     ),
                                     Text(
-                                        "The Big Brother BIg SIster mission is to provide children facing adversity  "
-                                        "with strong and enduring, professioanlly supporteed 1-1 mentoring relationships "
-                                        "that change their lives for the better.")
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    // Eligability
-                    Container(
-                      margin: EdgeInsets.symmetric(vertical: 10),
-                      padding: EdgeInsets.all(10),
-                      height: 100,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(13),
-                        boxShadow: [
-                          BoxShadow(
-                            offset: Offset(0, 17),
-                            blurRadius: 17,
-                            spreadRadius: -23,
-                            color: kShadowColor,
-                          ),
-                        ],
-                      ),
-                      child: Material(
-                        color: Colors.transparent,
-                        child: InkWell(
-                          onTap: () {},
-                          child: Row(
-                            children: [
-                              SizedBox(width: 20),
-                              Expanded(
-                                child: Column(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Center(
-                                      child: Text(
-                                        "Eligability",
-                                        // ignore: deprecated_member_use
-                                        style: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.w900,
-                                        ),
-                                      ),
-                                    ),
-                                    Center(
-                                        child: Text(
-                                            "       Children 6-14 years old\n"
-                                            " Volunteers atleast 18 years old")),
+                                        "Our mission is to provide low income families in our community with comprehensive, "
+                                        "affordable and well- balanced care for children 6 weeks old to 5 years old year-round, "
+                                        "and up to 8 years old during the summer.")
                                   ],
                                 ),
                               ),
@@ -214,7 +162,7 @@ class BigBroBigSis extends StatelessWidget {
                                     ),
                                     Center(
                                         child: Text(
-                                            "306 N. Loop 288, #107, Denton, TX 76209")),
+                                            "1212 Long Road Denton tx 76207")),
                                   ],
                                 ),
                               ),
@@ -264,9 +212,7 @@ class BigBroBigSis extends StatelessWidget {
                                       ),
                                     ),
                                     Center(
-                                        child: Text(
-                                            "8:00AM - 5:00PM Monday-Friday\n"
-                                            "              Appointment Only")),
+                                        child: Text("6AM-6PM Monday-Friday")),
                                   ],
                                 ),
                               ),
@@ -314,8 +260,8 @@ class BigBroBigSis extends StatelessWidget {
                                       ),
                                     ),
                                     Center(
-                                        child: Text(
-                                            "Phone Number: (888)887-BIGS(2447)"))
+                                        child:
+                                            Text("Phone Number: 940-369-2340"))
                                   ],
                                 ),
                               ),
