@@ -8,7 +8,7 @@ class DCommunityCovid extends StatelessWidget {
       body: Stack(
         children: [
           Container(
-            height: 250,
+            height: 300,
             decoration: BoxDecoration(
               color: Colors.red[200],
               image: DecorationImage(
@@ -98,21 +98,25 @@ class DCommunityCovid extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
                                     Text(
-                                        "The Board of the Denton Community Food Center is committed to taking extra "
-                                        "precautions to keep our volunteers, clients and food supply safe.  We are closely "
-                                        "monitoring the latest developments related to COVID 19 and following the guidelines of "
-                                        "government and public health officials.\n"
-                                        "We are cleaning and sanitizing surfaces regularly and asking that everyone "
-                                        "wash their hands often and thoroughly.  Please stay home if you are feeling ill.\n"
-                                        "As necessary, we are preparing to make adjustments in the distribution of "
-                                        "food in order to reduce contact and protect vulnerable individuals in our community. "
-                                        "See details regarding our Drive Thru Distribution process and other adjustment elsewhere "
-                                        "on this site.\n"
-                                        "We anticipate seeing a larger number of families with school age children "
-                                        "requiring food as they may be missing out on school breakfast "
-                                        "and lunch programs.\n​"
-                                        "Your donation will go far in helping us meeting this increased demand.\n​"
-                                        "Our sincerest thanks for your support")
+                                      "The Board of the Denton Community Food Center is committed to taking extra "
+                                      "precautions to keep our volunteers, clients and food supply safe.  We are closely "
+                                      "monitoring the latest developments related to COVID 19 and following the guidelines of "
+                                      "government and public health officials.\n"
+                                      "We are cleaning and sanitizing surfaces regularly and asking that everyone "
+                                      "wash their hands often and thoroughly.  Please stay home if you are feeling ill.\n"
+                                      "As necessary, we are preparing to make adjustments in the distribution of "
+                                      "food in order to reduce contact and protect vulnerable individuals in our community. "
+                                      "See details regarding our Drive Thru Distribution process and other adjustment elsewhere "
+                                      "on this site.\n"
+                                      "We anticipate seeing a larger number of families with school age children "
+                                      "requiring food as they may be missing out on school breakfast "
+                                      "and lunch programs.\n​"
+                                      "Your donation will go far in helping us meeting this increased demand.\n​"
+                                      "Our sincerest thanks for your support",
+                                      style: TextStyle(
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w400),
+                                    )
                                   ],
                                 ),
                               ),
