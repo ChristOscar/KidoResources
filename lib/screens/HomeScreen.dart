@@ -78,6 +78,14 @@ class HomeScreen extends StatelessWidget {
                       crossAxisSpacing: 10,
                       mainAxisSpacing: 10,
                       children: <Widget>[
+                        //Labor and Delivery
+                        CatagoryCard(
+                          title: "Labor and Delivery",
+                          text: " ",
+                          svgSrc: "assets/icons/Labor_Delivery-01.svg",
+                          press: () {},
+                        ),
+                        //Food Resources
                         CatagoryCard(
                           title: "Food Resources",
                           text: '',
@@ -91,6 +99,7 @@ class HomeScreen extends StatelessWidget {
                             );
                           },
                         ),
+                        //Actvities
                         CatagoryCard(
                           title: "Actvities",
                           text: '',
@@ -104,8 +113,9 @@ class HomeScreen extends StatelessWidget {
                             );
                           },
                         ),
+                        //Education
                         CatagoryCard(
-                          title: "Schools",
+                          title: "Education",
                           text: '',
                           svgSrc: "assets/icons/Booklover4.svg",
                           press: () {
@@ -117,6 +127,22 @@ class HomeScreen extends StatelessWidget {
                             );
                           },
                         ),
+                        //Healthcare
+                        CatagoryCard(
+                          title: "Healthcare",
+                          text: " ",
+                          svgSrc: "assets/icons/Healthcare_people.svg",
+                          press: () {},
+                        ),
+                        //Physical Thearpy
+                        CatagoryCard(
+                          title: "Physical Thearpy",
+                          text: " ",
+                          svgSrc: "assets/icons/Physical_Therpy-01.svg",
+                          press: () {},
+                        ),
+
+                        //Adding more Cards
                       ],
                     ),
                   ),
