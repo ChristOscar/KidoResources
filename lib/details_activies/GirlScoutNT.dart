@@ -101,7 +101,6 @@ class GirlScoutNortheastTexas extends StatelessWidget {
                                     Center(
                                       child: Text(
                                         "Our Goal",
-                                        // ignore: deprecated_member_use
                                         style: TextStyle(
                                           fontSize: 18,
                                           fontWeight: FontWeight.w900,
@@ -152,7 +151,6 @@ class GirlScoutNortheastTexas extends StatelessWidget {
                                     Center(
                                       child: Text(
                                         "Eligability",
-                                        // ignore: deprecated_member_use
                                         style: TextStyle(
                                           fontSize: 18,
                                           fontWeight: FontWeight.w900,
@@ -201,7 +199,6 @@ class GirlScoutNortheastTexas extends StatelessWidget {
                                     Center(
                                       child: Text(
                                         "Location",
-                                        // ignore: deprecated_member_use
                                         style: TextStyle(
                                           fontSize: 18,
                                           fontWeight: FontWeight.w900,
@@ -252,7 +249,6 @@ class GirlScoutNortheastTexas extends StatelessWidget {
                                     Center(
                                       child: Text(
                                         "Schedule",
-                                        // ignore: deprecated_member_use
                                         style: TextStyle(
                                           fontSize: 18,
                                           fontWeight: FontWeight.w900,
