@@ -36,10 +36,7 @@ class InfoCard extends StatelessWidget {
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900),
                   ),
                 ),
-                Center(
-                  child: SvgPicture.asset(svgImage),
-                ),
-                Text(text),
+                Center(child: Text(text)),
               ],
             ),
           ),

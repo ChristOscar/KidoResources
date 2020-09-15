@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:kidoresources/constants.dart';
 import 'package:kidoresources/widgets/Information_Card.dart';
 
 class FirstRefugeMinistries2 extends StatelessWidget {
@@ -10,15 +8,29 @@ class FirstRefugeMinistries2 extends StatelessWidget {
       body: Stack(
         children: [
           Container(
-            height: 175,
+            height: 350.0,
             decoration: BoxDecoration(
               color: Colors.red[200],
               image: DecorationImage(
-                  image: AssetImage("assets/images/undraw_pilates_gpdb.png"),
+                  image: AssetImage("assets/images/foodumm.png"),
                   fit: BoxFit.fitWidth),
             ),
           ),
-          //Filling Void
+          //Backbutton
+          SafeArea(
+            child: Column(
+              children: <Widget>[
+                //Back Button
+                IconButton(
+                    icon: Icon(Icons.chevron_left),
+                    alignment: Alignment(-1, -1),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    }),
+              ],
+            ),
+          ),
+          //Title
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
@@ -44,33 +56,35 @@ class FirstRefugeMinistries2 extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(
-                      height: 45,
+                      height: 200,
                     ),
                     //Our Mission
                     InfoCard(
-                      cardheight: 250.0,
-                      title: "Our Mission",
-                      svgImage: "assets/icons/Healthcare_people.svg",
+                      cardheight: 150.0,
+                      title: "Our Goal",
                       text:
-                          "Serve Denton partners with nonprofits to help make thier service more accessible for people in need.",
-                    ),
-                    SizedBox(height: 15),
-                    //Our Mission
-                    InfoCard(
-                      cardheight: 250.0,
-                      title: "Our Mission",
-                      svgImage: "assets/icons/Healthcare_people.svg",
-                      text:
-                          "Serve Denton partners with nonprofits to help make thier service more accessible for people in need.",
+                          "Assist people who are hungry and in need of food during a finacial crisis.",
                     ),
                     SizedBox(height: 15),
                     //Our Mission
                     InfoCard(
-                      cardheight: 250.0,
-                      title: "Our Mission",
-                      svgImage: "assets/icons/Healthcare_people.svg",
+                      cardheight: 75.0,
+                      title: "Location",
+                      text: "1701 Broadway St. Denton, TX 76201",
+                    ),
+                    SizedBox(height: 15),
+                    //Our Mission
+                    InfoCard(
+                      cardheight: 100.0,
+                      title: "Schedule",
                       text:
-                          "Serve Denton partners with nonprofits to help make thier service more accessible for people in need.",
+                          " 9:00AM-12:00PM Monday\n 1:00PM-4:00 PM Wednesday\n 6:00PM-8:00 PM Thursday",
+                    ),
+                    SizedBox(height: 15),
+                    InfoCard(
+                      cardheight: 85.0,
+                      title: "Contact Information",
+                      text: "Phone Number: (940)484-4384 ",
                     ),
                   ],
                 ),
