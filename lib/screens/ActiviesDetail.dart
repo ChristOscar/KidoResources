@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kidoresources/constants.dart';
+import 'package:kidoresources/details_activies/BBBS.dart';
 import 'package:kidoresources/details_activies/Big_brothers_big_sisters.dart';
+import 'package:kidoresources/details_activies/EM.dart';
 import 'package:kidoresources/details_activies/Explorium_Museum.dart';
+import 'package:kidoresources/details_activies/GSNT.dart';
 import 'package:kidoresources/details_activies/GirlScoutNT.dart';
 import 'package:kidoresources/screens/CalenderScreen.dart';
 import 'package:kidoresources/widgets/Navigation_bar.dart';
@@ -150,7 +153,7 @@ class ActiviesDetail extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => BigBroBigSis()));
+                                    builder: (context) => BigBroBigSis2()));
                           },
                           child: Row(
                             children: [
@@ -206,7 +209,7 @@ class ActiviesDetail extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => ExploriumMuseum()));
+                                    builder: (context) => ExploriumMuseum2()));
                           },
                           child: Row(
                             children: [
@@ -263,7 +266,7 @@ class ActiviesDetail extends StatelessWidget {
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) =>
-                                        GirlScoutNortheastTexas()));
+                                        GirlScoutNortheastTexas2()));
                           },
                           child: Row(
                             children: [

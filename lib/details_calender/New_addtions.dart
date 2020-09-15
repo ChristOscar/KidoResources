@@ -72,7 +72,7 @@ class NewAddtions extends StatelessWidget {
                     Container(
                       margin: EdgeInsets.symmetric(vertical: 10),
                       padding: EdgeInsets.all(10),
-                      height: 225,
+                      height: 300,
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(13),
@@ -85,40 +85,33 @@ class NewAddtions extends StatelessWidget {
                           ),
                         ],
                       ),
-                      child: Material(
-                        color: Colors.transparent,
-                        child: InkWell(
-                          onTap: () {},
-                          child: Row(
-                            children: [
-                              SvgPicture.asset(
-                                "assets/icons/Booklover4.svg",
-                              ),
-                              SizedBox(width: 20),
-                              Expanded(
-                                child: Column(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Text(
-                                      "Denton City County Day School",
-                                      // ignore: deprecated_member_use
-                                      style: TextStyle(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w900,
-                                      ),
-                                    ),
-                                    Text(
-                                        "With the recent addtion of Denton City County Day School, we can proudly announce our involment within the school system."
-                                        "With this addition we are now able to spread our resources and ensure that parents are learning about our app."
-                                        "Thank you to everyone that has helped us accomplish this goal.")
-                                  ],
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text(
+                                  "Denton City County Day School",
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w900,
+                                  ),
                                 ),
-                              ),
-                            ],
+                                Center(
+                                  child: SvgPicture.asset(
+                                    "assets/icons/Booklover4.svg",
+                                  ),
+                                ),
+                                Text(
+                                    "With the recent addtion of Denton City County Day School, we can proudly announce our involment within the school system."
+                                    "With this addition we are now able to spread our resources and ensure that parents are learning about our app."
+                                    "Thank you to everyone that has helped us accomplish this goal.")
+                              ],
+                            ),
                           ),
-                        ),
+                        ],
                       ),
                     ),
                   ],
