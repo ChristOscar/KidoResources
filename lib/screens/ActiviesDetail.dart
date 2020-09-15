@@ -1,10 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kidoresources/constants.dart';
+import 'package:kidoresources/details_activies/BBBS.dart';
 import 'package:kidoresources/details_activies/Big_brothers_big_sisters.dart';
+import 'package:kidoresources/details_activies/Camp_Fire.dart';
+import 'package:kidoresources/details_activies/Camp_Summit.dart';
+import 'package:kidoresources/details_activies/EM.dart';
+import 'package:kidoresources/details_activies/ExcelCenter_Lewisville.dart';
 import 'package:kidoresources/details_activies/Explorium_Museum.dart';
+import 'package:kidoresources/details_activies/GSNT.dart';
 import 'package:kidoresources/details_activies/GirlScoutNT.dart';
+import 'package:kidoresources/details_activies/Journey_Dream.dart';
+import 'package:kidoresources/screens/BoyGirl_ClubNorthCentral.dart';
 import 'package:kidoresources/screens/CalenderScreen.dart';
+import 'package:kidoresources/details_activies/CrossTimbers_YMCA.dart';
+import 'package:kidoresources/widgets/Bio_Card.dart';
 import 'package:kidoresources/widgets/Navigation_bar.dart';
 import 'package:kidoresources/widgets/search_bar.dart';
 
@@ -125,174 +135,138 @@ class ActiviesDetail extends StatelessWidget {
                       child: SearchBar(),
                     ),
                     SizedBox(height: 10),
-                    // Special Made Widgets
-                    // Big Brothers Big Sisters
-                    Container(
-                      margin: EdgeInsets.symmetric(vertical: 10),
-                      padding: EdgeInsets.all(10),
-                      height: 165,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(13),
-                        boxShadow: [
-                          BoxShadow(
-                            offset: Offset(0, 17),
-                            blurRadius: 17,
-                            spreadRadius: -23,
-                            color: kShadowColor,
-                          ),
-                        ],
-                      ),
-                      child: Material(
-                        color: Colors.transparent,
-                        child: InkWell(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => BigBroBigSis()));
-                          },
-                          child: Row(
-                            children: [
-                              SvgPicture.asset(
-                                "assets/icons/Meditation_women_small.svg",
-                              ),
-                              SizedBox(width: 20),
-                              Expanded(
-                                child: Column(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Text(
-                                      "Big Brother Big Sisters",
-                                      // ignore: deprecated_member_use
-                                      style:
-                                          // ignore: deprecated_member_use
-                                          Theme.of(context).textTheme.subtitle,
-                                    ),
-                                    Text(
-                                        "We partner with parents/guardians, volunteers, and donors"
-                                        " to provide children with strong  enduring, professionally supported one-to-one relationships.")
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
+                    //Big Brother Big Sisters
+                    Biocard(
+                      cardheight: 165.0,
+                      svgImage: "assets/icons/Meditation_women_small.svg",
+                      title: "Big Brother Big Sisters",
+                      text:
+                          "We partner with parents/guardians, volunteers, and donors"
+                          " to provide children with strong  enduring, professionally supported one-to-one relationships.",
+                      press: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => BigBroBigSis2()));
+                      },
                     ),
                     //Explorium Children's Museum
-                    Container(
-                      margin: EdgeInsets.symmetric(vertical: 10),
-                      padding: EdgeInsets.all(10),
-                      height: 165,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(13),
-                        boxShadow: [
-                          BoxShadow(
-                            offset: Offset(0, 17),
-                            blurRadius: 17,
-                            spreadRadius: -23,
-                            color: kShadowColor,
-                          ),
-                        ],
-                      ),
-                      child: Material(
-                        color: Colors.transparent,
-                        child: InkWell(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => ExploriumMuseum()));
-                          },
-                          child: Row(
-                            children: [
-                              SvgPicture.asset(
-                                "assets/icons/Meditation_women_small.svg",
-                              ),
-                              SizedBox(width: 20),
-                              Expanded(
-                                child: Column(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Text(
-                                      "Explorium Children's Museum",
-                                      // ignore: deprecated_member_use
-                                      style:
-                                          // ignore: deprecated_member_use
-                                          Theme.of(context).textTheme.subtitle,
-                                    ),
-                                    Text(
-                                        "We believe that children should be able to explore their curiosities in a safe environment. "
-                                        "We want to provide opportunities for children to experience the wonder and excitement of diffrent career fields.")
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
+                    Biocard(
+                      cardheight: 165.0,
+                      svgImage: "assets/icons/Meditation_women_small.svg",
+                      title: "Explorium Children's Museum",
+                      text:
+                          "We believe that children should be able to explore their curiosities in a safe environment. "
+                          "We want to provide opportunities for children to experience the wonder and excitement of diffrent career fields.",
+                      press: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ExploriumMuseum2()));
+                      },
                     ),
                     //Girl Scout of Northeast Texas
-                    Container(
-                      margin: EdgeInsets.symmetric(vertical: 10),
-                      padding: EdgeInsets.all(10),
-                      height: 175,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(13),
-                        boxShadow: [
-                          BoxShadow(
-                            offset: Offset(0, 17),
-                            blurRadius: 17,
-                            spreadRadius: -23,
-                            color: kShadowColor,
-                          ),
-                        ],
-                      ),
-                      child: Material(
-                        color: Colors.transparent,
-                        child: InkWell(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        GirlScoutNortheastTexas()));
-                          },
-                          child: Row(
-                            children: [
-                              SvgPicture.asset(
-                                "assets/icons/Meditation_women_small.svg",
-                              ),
-                              SizedBox(width: 20),
-                              Expanded(
-                                child: Column(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Text(
-                                      "Girl Scout of Northeast Texas ",
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                    Text(
-                                        "Girl Scouts of Northeast Texas inspires girls everywhere to stand up and make a "
-                                        "difference. By nurturing innovation and developing leadership skills, we prepare "
-                                        "girls to overcome challenges and advocate for their ideas now and later.")
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
+                    Biocard(
+                      cardheight: 180.0,
+                      svgImage: "assets/icons/Meditation_women_small.svg",
+                      title: "Girl Scout of Northeast Texas",
+                      text:
+                          "Girl Scouts of Northeast Texas inspires girls everywhere to stand up and make a difference. By nurturing innovation and "
+                          "developing leadership skills, we prepare girls to overcome challenges and advocate for their ideas now and later.",
+                      press: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    GirlScoutNortheastTexas2()));
+                      },
+                    ),
+                    //Camp Fire First Texas
+                    Biocard(
+                      cardheight: 180.0,
+                      svgImage: "assets/icons/Meditation_women_small.svg",
+                      title: "Camp Fire First Texas",
+                      text:
+                          "Camp Fire First Texas offers youth development programs for boys and girls ages 6 months - 18 years old.",
+                      press: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => CampFireFirstTexas()));
+                      },
+                    ),
+                    //Camp Summit
+                    Biocard(
+                      cardheight: 180.0,
+                      svgImage: "assets/icons/Meditation_women_small.svg",
+                      title: "Camp Summit",
+                      text:
+                          "Camp Summit is a year round residential camping program for children and adults with disabilities.",
+                      press: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => CampSummit()));
+                      },
+                    ),
+                    //Cross Timbers YMCA
+                    Biocard(
+                      cardheight: 180.0,
+                      svgImage: "assets/icons/Meditation_women_small.svg",
+                      title: "Cross Timbers YMCA",
+                      text:
+                          "Cross Timbers YMCA provides various programs for youth and adults in their community.",
+                      press: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => CrossTimbersYMCA()));
+                      },
+                    ),
+                    //Excel Center of Lewisville
+                    Biocard(
+                      cardheight: 180.0,
+                      svgImage: "assets/icons/Meditation_women_small.svg",
+                      title: "Excel Center of Lewisville",
+                      text:
+                          "Excel Center or Lewisville is a specialized day treatement program providing various mental health programs.",
+                      press: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ExcelCenterLewisville()));
+                      },
+                    ),
+                    //Journey to Dream
+                    Biocard(
+                      cardheight: 180.0,
+                      svgImage: "assets/icons/Meditation_women_small.svg",
+                      title: "Journey to Dream",
+                      text:
+                          "Journey to Dream is a homeless shelter for teens. Which also has school programs and advocacy programs.",
+                      press: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => JourneyDream()));
+                      },
+                    ),
+                    //Boys and Girls Club of North Central Texas
+                    Biocard(
+                      cardheight: 180.0,
+                      svgImage: "assets/icons/Meditation_women_small.svg",
+                      title: "Boys and Girls Club of North Central Texas",
+                      text:
+                          "The mission of the Boys & Girls Clubs of North Central Texas is to enable all young people, "
+                          "especially those who need us most, to reach their full potential as productive, caring and "
+                          "responsible citizens",
+                      press: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    BoyGirlClubNorthCentral()));
+                      },
                     ),
                     //End Marker
                   ],
