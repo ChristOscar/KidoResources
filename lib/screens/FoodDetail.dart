@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kidoresources/constants.dart';
+import 'package:kidoresources/details_food/DCFC.dart';
 import 'package:kidoresources/details_food/DentonCommunity_FoodCenter.dart';
 import 'package:kidoresources/details_food/FRM.dart';
 import 'package:kidoresources/details_food/FirstRefugeMinistries.dart';
+import 'package:kidoresources/details_food/SD.dart';
 import 'package:kidoresources/details_food/Serve_Denton.dart';
 import 'package:kidoresources/screens/CalenderScreen.dart';
 import 'package:kidoresources/widgets/Navigation_bar.dart';
@@ -205,7 +207,7 @@ class FoodDetail extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => DCommunityFood()));
+                                    builder: (context) => DCommunityFood2()));
                           },
                           child: Row(
                             children: [
@@ -263,7 +265,7 @@ class FoodDetail extends StatelessWidget {
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) =>
-                                        FirstRefugeMinistries2()));
+                                        FirstRefugeMinistries()));
                           },
                           child: Row(
                             children: [

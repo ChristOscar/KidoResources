@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kidoresources/widgets/Information_Card.dart';
 
-class ServeDenton extends StatelessWidget {
+class DCommunityFood2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +39,7 @@ class ServeDenton extends StatelessWidget {
                 children: [
                   Center(
                     child: Text(
-                      "Serve Denton",
+                      "Denton CFC",
                       style:
                           TextStyle(fontWeight: FontWeight.w900, fontSize: 23),
                     ),
@@ -63,28 +63,50 @@ class ServeDenton extends StatelessWidget {
                       cardheight: 150.0,
                       title: "Our Mission",
                       text:
-                          "Serve Denton partners with nonprofits to help make their services more accessible for people in need.",
+                          "Denton Community Food Center provides food from a central community storehouse to needy families and "
+                          "individuals struggling with hunger insecurity.",
                     ),
                     SizedBox(height: 15),
-                    //The Problem
+                    //Program Goal
                     InfoCard(
                       cardheight: 185.0,
-                      title: "The Problem",
+                      title: "Program Goal",
                       text:
-                          "When a family falls on hard times, finding help can be overwhelming. And when nonprofits are spread out, "
-                          "it can be difficult to find the organizations that can help, let alone find the transportation."
-                          "Serve Denton was created as a solution.",
+                          "Provides food from a central storehouse to families/individuals struggling with hunger insecurity. Clients are "
+                          "limited to six visits per year. (no more than once a calender month) The center accepts donations of food and "
+                          "contributions of money, which is used ot buy needed commodities. ",
                     ),
                     SizedBox(height: 15),
-                    //Our Soultion
+                    //Eligability
                     InfoCard(
                       cardheight: 225.0,
-                      title: "Our Soultion",
+                      title: "Eligability",
                       text:
-                          "Our solution is to have multiple nonprofit agencies on the same campus, so those in need only have to visit one location to "
-                          "receive the help they need, making social services more accessible.\n"
-                          "When nonprofits are officing in the same building, this increases their collaboration and communication, "
-                          "which helps our neighbors get back on their feet more quickly.",
+                          "Serving residents of the city of Denton and Northern Denton County (North of Lake Lewisville) and qualify "
+                          "under TEDAP (TX Emergency Food Assistance Progrram) Income Guidlines. Identification Needed (Drivers License, "
+                          "School ID, or other photo ID) for all family memebers for which you are requesting food.",
+                    ),
+                    SizedBox(height: 15),
+                    //Schedule
+                    InfoCard(
+                      cardheight: 130.0,
+                      title: "Schedule",
+                      text:
+                          "1:00p.m. - 3:00PM Monday - Friday\n Excluding Holidays\n COVID ours 9-11am on Monday and Wednesday",
+                    ),
+                    SizedBox(height: 15),
+                    //Location
+                    InfoCard(
+                      cardheight: 85.0,
+                      title: "Location",
+                      text: "306 N. Loop 288, Suite 400; Denton 76209",
+                    ),
+                    SizedBox(height: 15),
+                    //Contact Information
+                    InfoCard(
+                      cardheight: 85.0,
+                      title: "Contact Information",
+                      text: "Phone Number: (940)382-0807",
                     ),
                     SizedBox(height: 15),
                   ],

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kidoresources/widgets/Information_Card.dart';
 
-class ServeDenton extends StatelessWidget {
+class ServeDenton2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
