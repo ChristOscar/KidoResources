@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kidoresources/widgets/Information_Card.dart';
 
-class DentonBible extends StatelessWidget {
+class DentonMobileFood extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,9 +39,9 @@ class DentonBible extends StatelessWidget {
                 children: [
                   Center(
                     child: Text(
-                      "Denton Bible Church",
+                      "Denton Mobile Food Pantry",
                       style:
-                          TextStyle(fontWeight: FontWeight.w700, fontSize: 21),
+                          TextStyle(fontWeight: FontWeight.w700, fontSize: 19),
                     ),
                   ),
                 ],
@@ -63,22 +63,22 @@ class DentonBible extends StatelessWidget {
                       cardheight: 150.0,
                       title: "Our Goal",
                       text:
-                          "Provides every day needs such as food, clothing, and other neccesities. Vision Ministries mission is to "
-                          "build bridges of reconciliation to a loving God and an authentic community through equipped believers.",
+                          "Provides food to thsoe in the community that are in need.",
                     ),
                     SizedBox(height: 15),
                     //Eligability
                     InfoCard(
                       cardheight: 100.0,
                       title: "Eligability",
-                      text: "None that we can discover",
+                      text:
+                          "For this resource there is no eligability. Anyone can come and get food.",
                     ),
                     SizedBox(height: 15),
                     //Schedule
                     InfoCard(
                       cardheight: 130.0,
                       title: "Schedule",
-                      text: "12:30p.m. - 4:00p.m. Monday - Thursday",
+                      text: "Every 2nd Saturday of the month from 9 - 11 am.",
                     ),
                     SizedBox(height: 15),
                     //Location
@@ -86,14 +86,7 @@ class DentonBible extends StatelessWidget {
                       cardheight: 100.0,
                       title: "Location",
                       text:
-                          "2300 E. University Dr. Denton TX 76209   VIsion Ministries 626 Wainwright St. Denton, TX 76201",
-                    ),
-                    SizedBox(height: 15),
-                    //Contact Information
-                    InfoCard(
-                      cardheight: 85.0,
-                      title: "Contact Information",
-                      text: "Phone Number: (940)297-6860",
+                          "1100 Malone St, Denton, TX 76201-2755, United States",
                     ),
                     SizedBox(height: 15),
                   ],
