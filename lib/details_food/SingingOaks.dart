@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kidoresources/widgets/Information_Card.dart';
 
-class DentonBible extends StatelessWidget {
+class SingingOaks extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,9 +39,9 @@ class DentonBible extends StatelessWidget {
                 children: [
                   Center(
                     child: Text(
-                      "Denton Bible Church",
+                      "Singing Oaks Church Of Christ",
                       style:
-                          TextStyle(fontWeight: FontWeight.w700, fontSize: 21),
+                          TextStyle(fontWeight: FontWeight.w700, fontSize: 18),
                     ),
                   ),
                 ],
@@ -63,37 +63,35 @@ class DentonBible extends StatelessWidget {
                       cardheight: 150.0,
                       title: "Our Goal",
                       text:
-                          "Provides every day needs such as food, clothing, and other neccesities. Vision Ministries mission is to "
-                          "build bridges of reconciliation to a loving God and an authentic community through equipped believers.",
+                          "Provides nonperishable and some frozen meats and vegetables for families.",
                     ),
                     SizedBox(height: 15),
                     //Eligability
                     InfoCard(
                       cardheight: 100.0,
                       title: "Eligability",
-                      text: "None that we can discover",
+                      text: "Amount of assiatance varies by family size",
                     ),
                     SizedBox(height: 15),
                     //Schedule
                     InfoCard(
                       cardheight: 130.0,
                       title: "Schedule",
-                      text: "12:30p.m. - 4:00p.m. Monday - Thursday",
+                      text: "3:00PM- 5:00PM  Tuesdays and Thursdays",
                     ),
                     SizedBox(height: 15),
                     //Location
                     InfoCard(
                       cardheight: 100.0,
                       title: "Location",
-                      text:
-                          "2300 E. University Dr. Denton TX 76209   VIsion Ministries 626 Wainwright St. Denton, TX 76201",
+                      text: "101 Cardianl Dr. Denton, TX 76209",
                     ),
                     SizedBox(height: 15),
                     //Contact Information
                     InfoCard(
                       cardheight: 85.0,
                       title: "Contact Information",
-                      text: "Phone Number: (940)297-6860",
+                      text: "Phone Number: (940)387-4355",
                     ),
                     SizedBox(height: 15),
                   ],

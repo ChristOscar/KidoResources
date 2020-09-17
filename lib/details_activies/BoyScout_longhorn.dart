@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kidoresources/widgets/Information_Card.dart';
 
-class DentonBible extends StatelessWidget {
+class BoyScoutLonghorn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,9 +10,9 @@ class DentonBible extends StatelessWidget {
           Container(
             height: 350.0,
             decoration: BoxDecoration(
-              color: Colors.red[200],
+              color: Colors.lightBlue[200],
               image: DecorationImage(
-                  image: AssetImage("assets/images/foodumm.png"),
+                  image: AssetImage("assets/images/meditation_bg.png"),
                   fit: BoxFit.fitWidth),
             ),
           ),
@@ -39,7 +39,7 @@ class DentonBible extends StatelessWidget {
                 children: [
                   Center(
                     child: Text(
-                      "Denton Bible Church",
+                      "Journey To Dream",
                       style:
                           TextStyle(fontWeight: FontWeight.w700, fontSize: 21),
                     ),
@@ -60,40 +60,42 @@ class DentonBible extends StatelessWidget {
                     ),
                     //Our Goal
                     InfoCard(
-                      cardheight: 150.0,
+                      cardheight: 200.0,
                       title: "Our Goal",
                       text:
-                          "Provides every day needs such as food, clothing, and other neccesities. Vision Ministries mission is to "
-                          "build bridges of reconciliation to a loving God and an authentic community through equipped believers.",
+                          "The Boy Scouts are serving 5 title 1 schools in partnership with DISD and the "
+                          "United Way of Denton County to provide low income youth a Scouting program to "
+                          "enrich, to enlarge, and to incorporate the values the Boy Scouts of  America "
+                          "are famous for. Youth meet after school one day a week, with weekend activities "
+                          "that are planned 4-5 times a year. ",
                     ),
                     SizedBox(height: 15),
                     //Eligability
                     InfoCard(
                       cardheight: 100.0,
                       title: "Eligability",
-                      text: "None that we can discover",
+                      text: "Youth Ages 6-20",
                     ),
                     SizedBox(height: 15),
                     //Schedule
                     InfoCard(
                       cardheight: 130.0,
                       title: "Schedule",
-                      text: "12:30p.m. - 4:00p.m. Monday - Thursday",
+                      text: "8:00AM - 5:00PM Monday-Friday",
                     ),
                     SizedBox(height: 15),
                     //Location
                     InfoCard(
                       cardheight: 100.0,
                       title: "Location",
-                      text:
-                          "2300 E. University Dr. Denton TX 76209   VIsion Ministries 626 Wainwright St. Denton, TX 76201",
+                      text: " 850 Cannon Dr. Hurst, TX 76054",
                     ),
                     SizedBox(height: 15),
                     //Contact Information
                     InfoCard(
                       cardheight: 85.0,
                       title: "Contact Information",
-                      text: "Phone Number: (940)297-6860",
+                      text: "Phone Number: (817)231-8500",
                     ),
                     SizedBox(height: 15),
                   ],

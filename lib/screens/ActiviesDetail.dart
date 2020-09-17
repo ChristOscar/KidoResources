@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kidoresources/constants.dart';
 import 'package:kidoresources/details_activies/BBBS.dart';
 import 'package:kidoresources/details_activies/Big_brothers_big_sisters.dart';
+import 'package:kidoresources/details_activies/BoyScout_longhorn.dart';
 import 'package:kidoresources/details_activies/Camp_Fire.dart';
 import 'package:kidoresources/details_activies/Camp_Summit.dart';
 import 'package:kidoresources/details_activies/EM.dart';
@@ -266,6 +267,22 @@ class ActiviesDetail extends StatelessWidget {
                             MaterialPageRoute(
                                 builder: (context) =>
                                     BoyGirlClubNorthCentral()));
+                      },
+                    ),
+                    //Boy Scouts of America-Longhorn Council
+                    Biocard(
+                      cardheight: 180.0,
+                      svgImage: "assets/icons/Meditation_women_small.svg",
+                      title: "Boy Scouts of America-Longhorn Council",
+                      text:
+                          "Boy Scouts of America-Longhorn Council provides low income "
+                          "youth a Scouting program to enrich, to enlarge, and to "
+                          "incorporate the values the Boy Scouts of  AMerica are famous for.",
+                      press: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => BoyScoutLonghorn()));
                       },
                     ),
                     //End Marker

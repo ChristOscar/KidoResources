@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kidoresources/widgets/Information_Card.dart';
 
-class DentonBible extends StatelessWidget {
+class OurDailyBread extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,9 +39,9 @@ class DentonBible extends StatelessWidget {
                 children: [
                   Center(
                     child: Text(
-                      "Denton Bible Church",
+                      "Our Daily Bread",
                       style:
-                          TextStyle(fontWeight: FontWeight.w700, fontSize: 21),
+                          TextStyle(fontWeight: FontWeight.w700, fontSize: 18),
                     ),
                   ),
                 ],
@@ -63,37 +63,40 @@ class DentonBible extends StatelessWidget {
                       cardheight: 150.0,
                       title: "Our Goal",
                       text:
-                          "Provides every day needs such as food, clothing, and other neccesities. Vision Ministries mission is to "
-                          "build bridges of reconciliation to a loving God and an authentic community through equipped believers.",
+                          "Our Daily Bread is a soup kitchen that serves free nutritious meals. Every single day!",
                     ),
                     SizedBox(height: 15),
                     //Eligability
                     InfoCard(
                       cardheight: 100.0,
                       title: "Eligability",
-                      text: "None that we can discover",
+                      text: "Norhern Denton County Resident",
                     ),
                     SizedBox(height: 15),
                     //Schedule
                     InfoCard(
-                      cardheight: 130.0,
+                      cardheight: 230.0,
                       title: "Schedule",
-                      text: "12:30p.m. - 4:00p.m. Monday - Thursday",
+                      text:
+                          "Breakfast served: Monday - Friday 10:00AM - 10:30AM\n "
+                          "Lunch Served: Monday - Friday 11:00AM - 1:15PM\n "
+                          "Lunch Served: Saturday 11:30AM - 12:30PM\n "
+                          "Dinner Served: Monday nights only 5:30PM - 6:30PM\n "
+                          "Hadnicapped Clients Allowed admittance to dinning area 10 minutes prior to regular opening times.",
                     ),
                     SizedBox(height: 15),
                     //Location
                     InfoCard(
                       cardheight: 100.0,
                       title: "Location",
-                      text:
-                          "2300 E. University Dr. Denton TX 76209   VIsion Ministries 626 Wainwright St. Denton, TX 76201",
+                      text: "300 W. Oak Street, Ste. 100 Denton, TX 76201",
                     ),
                     SizedBox(height: 15),
                     //Contact Information
                     InfoCard(
                       cardheight: 85.0,
                       title: "Contact Information",
-                      text: "Phone Number: (940)297-6860",
+                      text: "Phone Number: (940)591-7952",
                     ),
                     SizedBox(height: 15),
                   ],
