@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kidoresources/widgets/Information_Card.dart';
 
-class FredMoore extends StatelessWidget {
+class CarouselAcademy extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +39,7 @@ class FredMoore extends StatelessWidget {
                 children: [
                   Center(
                     child: Text(
-                      "Fred Moore Day Nursery School",
+                      "Carousel Academy",
                       style:
                           TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
                     ),
@@ -60,51 +60,49 @@ class FredMoore extends StatelessWidget {
                     ),
                     //Our Mission
                     InfoCard(
-                      cardheight: 180.0,
+                      cardheight: 220.0,
                       title: "Our Mission",
                       text:
-                          "Our mission is to provide low income families in our community with comprehensive, "
-                          "affordable and well- balanced care for children 6 weeks old to 5 years old year-round, "
-                          "and up to 8 years old during the summer.",
+                          "At Carousel, we are committed to providing the best possible care for your family. "
+                          "We believe that caring for children is a special privilege and it is our desire to "
+                          "guide and nurture each child by providing social, emotional, physical, intellectual "
+                          "and spiritual learning experiences.",
                     ),
                     SizedBox(height: 15),
                     //Eligability
                     InfoCard(
-                      cardheight: 100.0,
+                      cardheight: 130.0,
                       title: "Eligability",
                       text:
-                          "Infant Age (0-18 months), Toddler Age (18 months - 3 years), Preschool Age (3-5 years), School Age (5-13 years)",
+                          "Infant Age (1-18 months), Toddler Age (18 months - 3 years), Preschool Age (3-5 years), School Age (5-13 years)",
                     ),
                     SizedBox(height: 15),
                     //Capacity
                     InfoCard(
                       cardheight: 100.0,
                       title: "Capacity",
-                      text: "150 Students",
+                      text: "115 Students",
                     ),
                     SizedBox(height: 15),
                     //Schedule
                     InfoCard(
                       cardheight: 130.0,
                       title: "Schedule",
-                      text: "6:00AM-6:00PM Monday-Friday",
+                      text: "7:00AM-6:00PM Monday-Friday",
                     ),
                     SizedBox(height: 15),
                     //Location
                     InfoCard(
                       cardheight: 120.0,
                       title: "Location",
-                      text: "                         Nursery Campus:\n "
-                          "821 Cross Timber Street Denton,Tx 76205\n "
-                          "                         Gonzalez Campus:\n "
-                          "             1212 Long Road Denton,Tx 76207 ",
+                      text: "401 Acker St Sanger Texas 76266",
                     ),
                     SizedBox(height: 15),
                     //Contact Information
                     InfoCard(
                       cardheight: 85.0,
                       title: "Contact Information",
-                      text: "Phone Number: (940)369-2340",
+                      text: "Phone Number: (940)458-0222",
                     ),
                     SizedBox(height: 15),
                   ],

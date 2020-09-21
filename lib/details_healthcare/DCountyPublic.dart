@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kidoresources/widgets/Information_Card.dart';
 
-class FredMoore extends StatelessWidget {
+class DCountyPublicHealth extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,9 +10,9 @@ class FredMoore extends StatelessWidget {
           Container(
             height: 350.0,
             decoration: BoxDecoration(
-              color: Colors.lightBlue[200],
+              color: Colors.yellow[200],
               image: DecorationImage(
-                  image: AssetImage("assets/images/ummschool.png"),
+                  image: AssetImage("assets/images/HC-01.png"),
                   fit: BoxFit.fitWidth),
             ),
           ),
@@ -39,9 +39,9 @@ class FredMoore extends StatelessWidget {
                 children: [
                   Center(
                     child: Text(
-                      "Fred Moore Day Nursery School",
+                      "Denton County Public Health",
                       style:
-                          TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
+                          TextStyle(fontWeight: FontWeight.w700, fontSize: 21),
                     ),
                   ),
                 ],
@@ -58,14 +58,29 @@ class FredMoore extends StatelessWidget {
                     SizedBox(
                       height: 200,
                     ),
-                    //Our Mission
+                    //Our Goal
                     InfoCard(
-                      cardheight: 180.0,
-                      title: "Our Mission",
-                      text:
-                          "Our mission is to provide low income families in our community with comprehensive, "
-                          "affordable and well- balanced care for children 6 weeks old to 5 years old year-round, "
-                          "and up to 8 years old during the summer.",
+                      cardheight: 350.0,
+                      title: "Our Goal",
+                      text: " Women’s health clinic, primary care 35"
+                          "clinic, child health clinic, dental services,"
+                          "immunizations for children and adults,"
+                          "pregnancy testing, STD/STI screening and"
+                          "treatment, TB elimination services, health"
+                          "education presentations and outreach,"
+                          "mammograms for low-income women over 40,"
+                          "and car seat education and provision of free car"
+                          "seats. Most programs and services are"
+                          "available to low-income Denton County"
+                          "residents and are offered by appointment only"
+                          "with various or no fees. Clinics accept cash and"
+                          "debit or credit cards only, but no client will be"
+                          "turned away for inability to pay. The following"
+                          "services are non-qualifying and offered to all"
+                          "general public residing within Denton"
+                          "County: STD/STI screening and treatment, TB"
+                          "elimination services. Please call for"
+                          "appointments.",
                     ),
                     SizedBox(height: 15),
                     //Eligability
@@ -73,38 +88,30 @@ class FredMoore extends StatelessWidget {
                       cardheight: 100.0,
                       title: "Eligability",
                       text:
-                          "Infant Age (0-18 months), Toddler Age (18 months - 3 years), Preschool Age (3-5 years), School Age (5-13 years)",
-                    ),
-                    SizedBox(height: 15),
-                    //Capacity
-                    InfoCard(
-                      cardheight: 100.0,
-                      title: "Capacity",
-                      text: "150 Students",
+                          "Most programs are available to lowincome families, and are provided at a low cost."
+                          "Call for more information on specific programs.",
                     ),
                     SizedBox(height: 15),
                     //Schedule
                     InfoCard(
                       cardheight: 130.0,
                       title: "Schedule",
-                      text: "6:00AM-6:00PM Monday-Friday",
+                      text: "7:00AM- 12:00PM and 1:00PM- 5:00PM"
+                          "Monday,Wednesday, Thursday, Friday; 7:00AM12:00PM and 1:00PM- 5:30PM Tuesdays",
                     ),
                     SizedBox(height: 15),
                     //Location
                     InfoCard(
-                      cardheight: 120.0,
+                      cardheight: 100.0,
                       title: "Location",
-                      text: "                         Nursery Campus:\n "
-                          "821 Cross Timber Street Denton,Tx 76205\n "
-                          "                         Gonzalez Campus:\n "
-                          "             1212 Long Road Denton,Tx 76207 ",
+                      text: "535 S. Loop 288, Ste. 1003 Denton, TX 76205",
                     ),
                     SizedBox(height: 15),
                     //Contact Information
                     InfoCard(
                       cardheight: 85.0,
                       title: "Contact Information",
-                      text: "Phone Number: (940)369-2340",
+                      text: "Phone Number: (940)349-2900",
                     ),
                     SizedBox(height: 15),
                   ],

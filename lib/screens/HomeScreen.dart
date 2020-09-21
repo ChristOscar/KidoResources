@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kidoresources/screens/ActiviesDetail.dart';
 import 'package:kidoresources/screens/CalenderScreen.dart';
 import 'package:kidoresources/screens/FoodDetail.dart';
+import 'package:kidoresources/screens/HealthcareDetail.dart';
 import 'package:kidoresources/screens/SchoolsDetail.dart';
 import 'package:kidoresources/widgets/Category_Card.dart';
 import 'package:kidoresources/widgets/Navigation_bar.dart';
@@ -113,9 +114,9 @@ class HomeScreen extends StatelessWidget {
                             );
                           },
                         ),
-                        //Education
+                        //Schools
                         CatagoryCard(
-                          title: "Education",
+                          title: "Schools",
                           text: '',
                           svgSrc: "assets/icons/Booklover4.svg",
                           press: () {
@@ -132,7 +133,14 @@ class HomeScreen extends StatelessWidget {
                           title: "Healthcare",
                           text: " ",
                           svgSrc: "assets/icons/Healthcare_people.svg",
-                          press: () {},
+                          press: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) {
+                                return HealthcareDetail();
+                              }),
+                            );
+                          },
                         ),
                         //Physical Thearpy
                         CatagoryCard(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kidoresources/widgets/Information_Card.dart';
 
-class FredMoore extends StatelessWidget {
+class DKiwanisChildrensClinic extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,9 +10,9 @@ class FredMoore extends StatelessWidget {
           Container(
             height: 350.0,
             decoration: BoxDecoration(
-              color: Colors.lightBlue[200],
+              color: Colors.yellow[200],
               image: DecorationImage(
-                  image: AssetImage("assets/images/ummschool.png"),
+                  image: AssetImage("assets/images/HC-01.png"),
                   fit: BoxFit.fitWidth),
             ),
           ),
@@ -39,9 +39,9 @@ class FredMoore extends StatelessWidget {
                 children: [
                   Center(
                     child: Text(
-                      "Fred Moore Day Nursery School",
+                      "Denton Kiwanis Childrens Clinic",
                       style:
-                          TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
+                          TextStyle(fontWeight: FontWeight.w700, fontSize: 19),
                     ),
                   ),
                 ],
@@ -58,14 +58,15 @@ class FredMoore extends StatelessWidget {
                     SizedBox(
                       height: 200,
                     ),
-                    //Our Mission
+                    //Our Goal
                     InfoCard(
-                      cardheight: 180.0,
-                      title: "Our Mission",
+                      cardheight: 200.0,
+                      title: "Our Goal",
                       text:
-                          "Our mission is to provide low income families in our community with comprehensive, "
-                          "affordable and well- balanced care for children 6 weeks old to 5 years old year-round, "
-                          "and up to 8 years old during the summer.",
+                          "Provides medical, dental, eye exams, glasses, counseling services, and prescriptions services "
+                          "for children up to age 18 who are not covered by Medicaid or other insurance. The clinic is a "
+                          "referral service to a number of local health care providers. Must meet financial guidelines. "
+                          "Area covered is Denton County north of Lake Lewisville.",
                     ),
                     SizedBox(height: 15),
                     //Eligability
@@ -73,38 +74,30 @@ class FredMoore extends StatelessWidget {
                       cardheight: 100.0,
                       title: "Eligability",
                       text:
-                          "Infant Age (0-18 months), Toddler Age (18 months - 3 years), Preschool Age (3-5 years), School Age (5-13 years)",
-                    ),
-                    SizedBox(height: 15),
-                    //Capacity
-                    InfoCard(
-                      cardheight: 100.0,
-                      title: "Capacity",
-                      text: "150 Students",
+                          "Children up to age 18. Must meet financial guidelines and not be covered by medicaid",
                     ),
                     SizedBox(height: 15),
                     //Schedule
                     InfoCard(
                       cardheight: 130.0,
                       title: "Schedule",
-                      text: "6:00AM-6:00PM Monday-Friday",
+                      text:
+                          "10:00AM - 5:00PM - Monday - Friday; 10:00AM - 12:00PM and 2:00PM - 5:00PM Monday,Wednesday and Thursday; "
+                          "2:00PM - 5:00PM Tuesday; closed Friday",
                     ),
                     SizedBox(height: 15),
                     //Location
                     InfoCard(
-                      cardheight: 120.0,
+                      cardheight: 100.0,
                       title: "Location",
-                      text: "                         Nursery Campus:\n "
-                          "821 Cross Timber Street Denton,Tx 76205\n "
-                          "                         Gonzalez Campus:\n "
-                          "             1212 Long Road Denton,Tx 76207 ",
+                      text: "1001 N. Elm St. Denton, TX 76201",
                     ),
                     SizedBox(height: 15),
                     //Contact Information
                     InfoCard(
                       cardheight: 85.0,
                       title: "Contact Information",
-                      text: "Phone Number: (940)369-2340",
+                      text: "Phone Number: (940)387-6323",
                     ),
                     SizedBox(height: 15),
                   ],

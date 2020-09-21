@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kidoresources/widgets/Information_Card.dart';
 
-class FredMoore extends StatelessWidget {
+class DCommunityHealthClinic extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,9 +10,9 @@ class FredMoore extends StatelessWidget {
           Container(
             height: 350.0,
             decoration: BoxDecoration(
-              color: Colors.lightBlue[200],
+              color: Colors.yellow[200],
               image: DecorationImage(
-                  image: AssetImage("assets/images/ummschool.png"),
+                  image: AssetImage("assets/images/HC-01.png"),
                   fit: BoxFit.fitWidth),
             ),
           ),
@@ -39,9 +39,9 @@ class FredMoore extends StatelessWidget {
                 children: [
                   Center(
                     child: Text(
-                      "Fred Moore Day Nursery School",
+                      "Denton Community Health Clinic",
                       style:
-                          TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
+                          TextStyle(fontWeight: FontWeight.w700, fontSize: 21),
                     ),
                   ),
                 ],
@@ -58,53 +58,40 @@ class FredMoore extends StatelessWidget {
                     SizedBox(
                       height: 200,
                     ),
-                    //Our Mission
+                    //Our Goal
                     InfoCard(
-                      cardheight: 180.0,
-                      title: "Our Mission",
+                      cardheight: 150.0,
+                      title: "Our Goal",
                       text:
-                          "Our mission is to provide low income families in our community with comprehensive, "
-                          "affordable and well- balanced care for children 6 weeks old to 5 years old year-round, "
-                          "and up to 8 years old during the summer.",
+                          "To Help those who are uninsured and are in need of medical help.",
                     ),
                     SizedBox(height: 15),
                     //Eligability
                     InfoCard(
                       cardheight: 100.0,
                       title: "Eligability",
-                      text:
-                          "Infant Age (0-18 months), Toddler Age (18 months - 3 years), Preschool Age (3-5 years), School Age (5-13 years)",
-                    ),
-                    SizedBox(height: 15),
-                    //Capacity
-                    InfoCard(
-                      cardheight: 100.0,
-                      title: "Capacity",
-                      text: "150 Students",
+                      text: "Individual, children and families of all ages",
                     ),
                     SizedBox(height: 15),
                     //Schedule
                     InfoCard(
                       cardheight: 130.0,
                       title: "Schedule",
-                      text: "6:00AM-6:00PM Monday-Friday",
+                      text: "8:00AM-5:00PM Monday-Friday",
                     ),
                     SizedBox(height: 15),
                     //Location
                     InfoCard(
-                      cardheight: 120.0,
+                      cardheight: 100.0,
                       title: "Location",
-                      text: "                         Nursery Campus:\n "
-                          "821 Cross Timber Street Denton,Tx 76205\n "
-                          "                         Gonzalez Campus:\n "
-                          "             1212 Long Road Denton,Tx 76207 ",
+                      text: " 306 N. Loop 288,Suite 400; Denton, TX 76209",
                     ),
                     SizedBox(height: 15),
                     //Contact Information
                     InfoCard(
                       cardheight: 85.0,
                       title: "Contact Information",
-                      text: "Phone Number: (940)369-2340",
+                      text: "Phone Number: (940)600-7527",
                     ),
                     SizedBox(height: 15),
                   ],

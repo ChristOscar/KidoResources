@@ -12,7 +12,7 @@ import 'package:kidoresources/details_activies/Explorium_Museum.dart';
 import 'package:kidoresources/details_activies/GSNT.dart';
 import 'package:kidoresources/details_activies/GirlScoutNT.dart';
 import 'package:kidoresources/details_activies/Journey_Dream.dart';
-import 'package:kidoresources/screens/BoyGirl_ClubNorthCentral.dart';
+import 'package:kidoresources/details_activies/BoyGirl_ClubNorthCentral.dart';
 import 'package:kidoresources/screens/CalenderScreen.dart';
 import 'package:kidoresources/details_activies/CrossTimbers_YMCA.dart';
 import 'package:kidoresources/widgets/Bio_Card.dart';
