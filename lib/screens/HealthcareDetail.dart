@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kidoresources/constants.dart';
-import 'package:kidoresources/details_schools/CarouselAcademy.dart';
-import 'package:kidoresources/details_schools/CastleHill.dart';
-import 'package:kidoresources/details_schools/DCS.dart';
-import 'package:kidoresources/details_schools/Dccds.dart';
-import 'package:kidoresources/details_schools/FredMoore.dart';
-import 'package:kidoresources/details_schools/KinderCare.dart';
-import 'package:kidoresources/details_schools/WitcherChildcare.dart';
+import 'package:kidoresources/details_healthcare/DCommunityHealth.dart';
+import 'package:kidoresources/details_healthcare/DCountyPublic.dart';
+import 'package:kidoresources/details_healthcare/DKiwanisClub.dart';
+import 'package:kidoresources/details_healthcare/SingingOaks.dart';
+import 'package:kidoresources/details_healthcare/TWUDental.dart';
+import 'package:kidoresources/details_healthcare/TexasHealthHuman.dart';
 import 'package:kidoresources/screens/CalenderScreen.dart';
 import 'package:kidoresources/widgets/Bio_Card.dart';
 import 'package:kidoresources/widgets/Navigation_bar.dart';
 import 'package:kidoresources/widgets/search_bar.dart';
 
-class SchoolsDetail extends StatelessWidget {
+class HealthcareDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -52,13 +50,13 @@ class SchoolsDetail extends StatelessWidget {
       ),
       body: Stack(
         children: <Widget>[
+          //Background Image
           Container(
-            //Background Image
             height: size.height * .65,
             decoration: BoxDecoration(
-              color: Colors.purple[100],
+              color: Colors.yellow[200],
               image: DecorationImage(
-                image: AssetImage("assets/images/ummschool.png"),
+                image: AssetImage("assets/images/HC-01.png"),
                 fit: BoxFit.fitWidth,
               ),
             ),
@@ -88,10 +86,10 @@ class SchoolsDetail extends StatelessWidget {
                     //Soon to be changed to be dynamic with the days
                     Center(
                       child: Text(
-                        "Schools",
+                        "Healthcare",
                         style: TextStyle(
                           fontWeight: FontWeight.w900,
-                          fontSize: 20,
+                          fontSize: 22,
                         ),
                       ),
                     ),
@@ -111,7 +109,7 @@ class SchoolsDetail extends StatelessWidget {
                       height: size.height * 0.05,
                     ),
                     Text(
-                      "Schools",
+                      "Healthcare",
                       style: TextStyle(fontWeight: FontWeight.w900),
                     ),
                     SizedBox(height: 10),
@@ -120,9 +118,7 @@ class SchoolsDetail extends StatelessWidget {
                       width:
                           size.width * .62, // it just take 60% of total width
                       child: Text(
-                        "The most valuable thing we have is time and attention. If time is the most valuable and"
-                        " precious thing we have, it's also the most precious thing we can give. Every day you give that to a student,"
-                        " a student that may not get much of anyone's time or attention.",
+                        "Don’t wait until your sick and hit rock bottom until you start caring about your health.",
                       ),
                     ),
                     SizedBox(
@@ -131,93 +127,94 @@ class SchoolsDetail extends StatelessWidget {
                     ),
                     SizedBox(height: 10),
                     // Special Made Widgets
-                    //DCCDS
+                    //Denton Community Health Clinic
                     Biocard(
                       cardheight: 165.0,
-                      svgImage: "assets/icons/Booklover4.svg",
-                      title: "Denton County City Day School",
+                      svgImage: "assets/icons/Healthcare_people.svg",
+                      title: "Denton Community Health Clinic",
                       text:
                           "Denton City County Day School mission is to support a diverse, multicultural community."
                           " Special emphasis and attention are placed on serving children from low to middle income families. ",
                       press: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Dccds2()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    DCommunityHealthClinic()));
                       },
                     ),
-                    //Fred Moore Day Nursery School
+                    //Denton County Public Health
                     Biocard(
                       cardheight: 165.0,
-                      svgImage: "assets/icons/Booklover4.svg",
-                      title: "Fred Moore Day Nursery School",
+                      svgImage: "assets/icons/Healthcare_people.svg",
+                      title: "Denton County Public Health",
                       text:
-                          "Fred Moore Day Nursery Schoolprovide low income families in our community "
-                          "with comprehensive, affordable and well- balanced care for children.",
+                          "Denton County Public health Clinical services provides preventive public health services to the residents of Denton County.",
                       press: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => FredMoore()));
+                                builder: (context) => DCountyPublicHealth()));
                       },
                     ),
-                    //Castle Hills for Kids Only Learning Center
+                    //Denton Kiwanis Childrens Clinic
                     Biocard(
                       cardheight: 165.0,
-                      svgImage: "assets/icons/Booklover4.svg",
-                      title: "Castle Hills for Kids Only Learning Center",
+                      svgImage: "assets/icons/Healthcare_people.svg",
+                      title: "Denton Kiwanis Childrens Clinic",
                       text:
-                          "Castle Hills for Kids Only Learning Center strives to physically meet "
-                          "and nurture the individual needs of each child in a safe, supportive and "
-                          "academically engaging learning environment",
+                          "Denton Kiwanis Club CHildrens Clinic is a referral service to a number of local health care providers.",
                       press: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => CastleHill()));
+                                builder: (context) =>
+                                    DKiwanisChildrensClinic()));
                       },
                     ),
-                    //KinderCare Learning Center
+                    //Singing Oaks Church of Christ
                     Biocard(
                       cardheight: 165.0,
-                      svgImage: "assets/icons/Booklover4.svg",
-                      title: "KinderCare Learning Center",
+                      svgImage: "assets/icons/Healthcare_people.svg",
+                      title: "Singing Oaks Church of Christ",
                       text:
-                          "KinderCare Learning Center gives children a foundation they can build on. "
-                          "Wherever they go after they leave KinderCare, they’ll be ready to think "
-                          "bigger, feel stronger, and aim higher.",
+                          "SInging Oaks Church of Christ provides prescription drug assistance for routine medical treatment.",
                       press: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => KinderCare()));
+                                builder: (context) =>
+                                    SingingOaksChurchofChrist()));
                       },
                     ),
-                    //Witcher Childcare
+                    //Texas Health and Human Services Commission
                     Biocard(
                       cardheight: 165.0,
-                      svgImage: "assets/icons/Booklover4.svg",
-                      title: "Witcher Childcare",
+                      svgImage: "assets/icons/Healthcare_people.svg",
+                      title: "Texas Health and Human Services Commission",
                       text:
-                          "Offering a comfortable home-based program, Witchers Child Care is "
-                          "designed to make every child feel nurtured and engaged.",
+                          "Texas Health and Human Services Commision provides support services for low income "
+                          "families including food stamps, TANF, Medicaid (child and pregnant women Medicaid).",
                       press: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => WitcherChildcare()));
+                                builder: (context) => TexasHealthHuman()));
                       },
                     ),
-                    //Carousel Academy
+                    //TWU Dental Hygiene Clinic
                     Biocard(
                       cardheight: 165.0,
-                      svgImage: "assets/icons/Booklover4.svg",
-                      title: "Carousel Academy",
+                      svgImage: "assets/icons/Healthcare_people.svg",
+                      title: "TWU Dental Hygiene Clinic",
                       text:
-                          "At Carousel, we are committed to providing the best possible care for your family.",
+                          "TWU Dental Hygine Clinic offers teeth cleaning, fluoride treatment, sealant, "
+                          "plaque control and full mouth X-rays to students and residents of Denton and the surrounding areas.",
                       press: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => CarouselAcademy()));
+                                builder: (context) => TWUDentalHygiene()));
                       },
                     ),
                   ],

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kidoresources/widgets/Information_Card.dart';
 
-class FredMoore extends StatelessWidget {
+class KinderCare extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +39,7 @@ class FredMoore extends StatelessWidget {
                 children: [
                   Center(
                     child: Text(
-                      "Fred Moore Day Nursery School",
+                      "KinderCare Learning Center",
                       style:
                           TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
                     ),
@@ -63,14 +63,15 @@ class FredMoore extends StatelessWidget {
                       cardheight: 180.0,
                       title: "Our Mission",
                       text:
-                          "Our mission is to provide low income families in our community with comprehensive, "
-                          "affordable and well- balanced care for children 6 weeks old to 5 years old year-round, "
-                          "and up to 8 years old during the summer.",
+                          "We’re more than educators. We help families build confidence for life. "
+                          "Our programs give children a foundation they can build on. Wherever "
+                          "they go after they leave KinderCare, they’ll be ready to think bigger, "
+                          "feel stronger, and aim higher.",
                     ),
                     SizedBox(height: 15),
                     //Eligability
                     InfoCard(
-                      cardheight: 100.0,
+                      cardheight: 130.0,
                       title: "Eligability",
                       text:
                           "Infant Age (0-18 months), Toddler Age (18 months - 3 years), Preschool Age (3-5 years), School Age (5-13 years)",
@@ -80,31 +81,28 @@ class FredMoore extends StatelessWidget {
                     InfoCard(
                       cardheight: 100.0,
                       title: "Capacity",
-                      text: "150 Students",
+                      text: "152 Students",
                     ),
                     SizedBox(height: 15),
                     //Schedule
                     InfoCard(
                       cardheight: 130.0,
                       title: "Schedule",
-                      text: "6:00AM-6:00PM Monday-Friday",
+                      text: "7:00AM-6:00PM Monday-Friday",
                     ),
                     SizedBox(height: 15),
                     //Location
                     InfoCard(
                       cardheight: 120.0,
                       title: "Location",
-                      text: "                         Nursery Campus:\n "
-                          "821 Cross Timber Street Denton,Tx 76205\n "
-                          "                         Gonzalez Campus:\n "
-                          "             1212 Long Road Denton,Tx 76207 ",
+                      text: "1300 E. Frankford Road Denton,Tx",
                     ),
                     SizedBox(height: 15),
                     //Contact Information
                     InfoCard(
                       cardheight: 85.0,
                       title: "Contact Information",
-                      text: "Phone Number: (940)369-2340",
+                      text: "Phone Number: (972)323-1300",
                     ),
                     SizedBox(height: 15),
                   ],

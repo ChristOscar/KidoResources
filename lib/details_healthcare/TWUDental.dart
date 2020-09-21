@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kidoresources/widgets/Information_Card.dart';
 
-class FredMoore extends StatelessWidget {
+class TWUDentalHygiene extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,9 +10,9 @@ class FredMoore extends StatelessWidget {
           Container(
             height: 350.0,
             decoration: BoxDecoration(
-              color: Colors.lightBlue[200],
+              color: Colors.yellow[200],
               image: DecorationImage(
-                  image: AssetImage("assets/images/ummschool.png"),
+                  image: AssetImage("assets/images/HC-01.png"),
                   fit: BoxFit.fitWidth),
             ),
           ),
@@ -39,9 +39,9 @@ class FredMoore extends StatelessWidget {
                 children: [
                   Center(
                     child: Text(
-                      "Fred Moore Day Nursery School",
+                      "TWU Dental Hygiene Clinic",
                       style:
-                          TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
+                          TextStyle(fontWeight: FontWeight.w700, fontSize: 19),
                     ),
                   ),
                 ],
@@ -58,53 +58,44 @@ class FredMoore extends StatelessWidget {
                     SizedBox(
                       height: 200,
                     ),
-                    //Our Mission
+                    //Our Goal
                     InfoCard(
-                      cardheight: 180.0,
-                      title: "Our Mission",
+                      cardheight: 300.0,
+                      title: "Our Goal",
                       text:
-                          "Our mission is to provide low income families in our community with comprehensive, "
-                          "affordable and well- balanced care for children 6 weeks old to 5 years old year-round, "
-                          "and up to 8 years old during the summer.",
+                          "Offers teeth cleaning, fluoride treatment, sealant, plaque control and full mouth X-rays to students and residents of Denton and"
+                          "the surrounding areas. Services are offered at a reduced cost because students provide them in a learning situation. Keep in mind these"
+                          "appointments are up to 4 hours in length. Anyone who schedules an appointment must be able to return if necessary to complete"
+                          "treatment.",
                     ),
                     SizedBox(height: 15),
                     //Eligability
                     InfoCard(
                       cardheight: 100.0,
                       title: "Eligability",
-                      text:
-                          "Infant Age (0-18 months), Toddler Age (18 months - 3 years), Preschool Age (3-5 years), School Age (5-13 years)",
-                    ),
-                    SizedBox(height: 15),
-                    //Capacity
-                    InfoCard(
-                      cardheight: 100.0,
-                      title: "Capacity",
-                      text: "150 Students",
+                      text: "Anyone 4 year or Older",
                     ),
                     SizedBox(height: 15),
                     //Schedule
                     InfoCard(
                       cardheight: 130.0,
                       title: "Schedule",
-                      text: "6:00AM-6:00PM Monday-Friday",
+                      text: "Call for Appointment",
                     ),
                     SizedBox(height: 15),
                     //Location
                     InfoCard(
-                      cardheight: 120.0,
+                      cardheight: 100.0,
                       title: "Location",
-                      text: "                         Nursery Campus:\n "
-                          "821 Cross Timber Street Denton,Tx 76205\n "
-                          "                         Gonzalez Campus:\n "
-                          "             1212 Long Road Denton,Tx 76207 ",
+                      text:
+                          "TWU Denton - MCL Building- First floor room 102 Denton, TX 76204",
                     ),
                     SizedBox(height: 15),
                     //Contact Information
                     InfoCard(
                       cardheight: 85.0,
                       title: "Contact Information",
-                      text: "Phone Number: (940)369-2340",
+                      text: "Phone Number: (940)891-2888",
                     ),
                     SizedBox(height: 15),
                   ],

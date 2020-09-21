@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kidoresources/screens/ActiviesDetail.dart';
 import 'package:kidoresources/screens/CalenderScreen.dart';
 import 'package:kidoresources/screens/FoodDetail.dart';
+import 'package:kidoresources/screens/HealthcareDetail.dart';
 import 'package:kidoresources/screens/SchoolsDetail.dart';
 import 'package:kidoresources/widgets/Category_Card.dart';
 import 'package:kidoresources/widgets/Navigation_bar.dart';
@@ -79,11 +80,39 @@ class HomeScreen extends StatelessWidget {
                       mainAxisSpacing: 10,
                       children: <Widget>[
                         //Labor and Delivery
+                        // CatagoryCard(
+                        //   title: "Labor and Delivery",
+                        //   text: " ",
+                        //   svgSrc: "assets/icons/Labor_Delivery-01.svg",
+                        //   press: () {},
+                        // ),
+                        //Schools
                         CatagoryCard(
-                          title: "Labor and Delivery",
+                          title: "Schools",
+                          text: '',
+                          svgSrc: "assets/icons/Booklover4.svg",
+                          press: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) {
+                                return SchoolsDetail();
+                              }),
+                            );
+                          },
+                        ),
+                        //Healthcare
+                        CatagoryCard(
+                          title: "Healthcare",
                           text: " ",
-                          svgSrc: "assets/icons/Labor_Delivery-01.svg",
-                          press: () {},
+                          svgSrc: "assets/icons/Healthcare_people.svg",
+                          press: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) {
+                                return HealthcareDetail();
+                              }),
+                            );
+                          },
                         ),
                         //Food Resources
                         CatagoryCard(
@@ -113,35 +142,14 @@ class HomeScreen extends StatelessWidget {
                             );
                           },
                         ),
-                        //Education
-                        CatagoryCard(
-                          title: "Education",
-                          text: '',
-                          svgSrc: "assets/icons/Booklover4.svg",
-                          press: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) {
-                                return SchoolsDetail();
-                              }),
-                            );
-                          },
-                        ),
-                        //Healthcare
-                        CatagoryCard(
-                          title: "Healthcare",
-                          text: " ",
-                          svgSrc: "assets/icons/Healthcare_people.svg",
-                          press: () {},
-                        ),
-                        //Physical Thearpy
-                        CatagoryCard(
-                          title: "Physical Thearpy",
-                          text: " ",
-                          svgSrc: "assets/icons/Physical_Therpy-01.svg",
-                          press: () {},
-                        ),
 
+                        //Physical Thearpy
+                        // CatagoryCard(
+                        //   title: "Physical Thearpy",
+                        //   text: " ",
+                        //   svgSrc: "assets/icons/Physical_Therpy-01.svg",
+                        //   press: () {},
+                        // ),
                         //Adding more Cards
                       ],
                     ),
